@@ -1,0 +1,114 @@
+body {
+	width:85%;
+	margin-left:2em;
+}
+code {
+	font-family:Monaco, monospace;
+	font-size:85%;
+	color:olive;
+}
+pre code {
+	padding:30px;
+ 	box-sizing:border-box;
+ 	-moz-box-sizing:border-box;
+ 	webkit-box-sizing:border-box;
+ 	display:block; 
+ 	white-space: pre-wrap;  
+ 	white-space: -moz-pre-wrap; 
+	white-space: -pre-wrap; 
+	white-space: -o-pre-wrap; 
+	word-wrap: break-word; 
+ 	width:100%; overflow-x:auto;
+}
+dl.def {
+	background:#EEEEEE;
+	padding:2em;
+	width:65%;
+}
+dl.def dt {
+	border-bottom:1px solid #AAAAAA;
+	margin-bottom:1em;
+}
+dl.def dd {
+	margin-bottom:1em;
+}
+.resalto {
+	background:#EEEEEE;
+	padding:2em;
+	width:65%;
+}
+.advertencia {
+	color:red;
+}
+ol.Romanos {
+	list-style-type:upper-roman;
+}
+h5 {
+	font-variant:small-caps;
+	font-size:1.5em;
+}
+h5 code {
+	font-variant:normal;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin-top:2em;
+}
+pre, blockquote, dl, .resalto {
+	margin:2em;
+}
+blockquote {
+	padding:0.3em 2em 3em 9em;
+	background:transparent url(../img/comillas.png) top left no-repeat;
+	font-family:Helvetica, sans-serif;
+}
+
+span.inicio-capitulo {
+	font-weight:bold;
+	font-family:serif;
+}
+span.inicio-capitulo b {
+	font-size: 360%;
+	line-height: 62%;
+	float:left;
+	padding-right:0.1em;
+	margin-top:12px;
+}
+abbr {
+	border-bottom:1px dotted #999999;
+}
+.noabbr abbr {
+	border-bottom:none;
+}
+u.errata {
+	text-decoration: line-through;
+}
+
+table {
+	border: 1px solid #DDDDDD;
+	padding:0.1em;
+	margin:3em 0;
+}
+caption {
+	font-family:Helvetica, Arial, sans-serif;
+	padding-bottom:0.3em;
+}
+
+th, td {
+	padding:0.5em;
+	border:1px solid #CCCCCC;
+}
+th {
+	background:#EEEEEE;
+}
+td.colspan {
+	text-align:center;
+}
+.asterisco {
+	text-decoration:none;
+}
+.notaasterisco {
+	font-variant:italic;
+	padding:1em 2em 1em 2em;
+	background:#EEEEEE;
+	border:1px solid #DDDDDD;
+}

@@ -1,0 +1,1849 @@
+<!DOCTYPE html>
+	<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<title>Edición semántica</title>
+		<link rel="stylesheet" href="estilos/style.css" />
+		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+	</head>
+	<body>
+		
+		<ol>
+			<li>XML y HTML: edición semántica</li>
+			<li>Qué son los lenguajes de marcado</li>
+			<li>Prehistoria e historia de los lenguajes de marcado
+				<ol>
+					<li>Los lenguajes de marcado en la era de la imprenta</li>
+					<li>Los inicios de los lenguajes de marcado modernos: William W. Tunicliffe</li>
+					<li>Ejemplos de lenguajes de marcado: fotocomposición, WordPerfect</li>
+				</ol>
+			</li>
+			<li>Tipos de lenguajes de marcado
+				<ol>
+					<li>Marcado de presentación</li>
+					<li>Marcado de procedimiento</li>
+					<li>Marcado descriptivo o semántico</li>
+				</ol>
+			</li>
+			<li>HTML5
+				<ol>
+					<li>Estructura de un documento HTML5</li>
+					<li>Elemento raíz, doctype</li>
+					<li>Metadatos del documento</li>
+					<li>Scripting</li>
+					<li>Secciones</li>
+					<li>Agrupaciones de contenidos</li>
+					<li>Semántica a nivel de texto</li>
+					<li>Contenido incrustado</li>
+					<li>Datos tabulares</li>
+					<li>Formularios</li>
+					<li>Elementos interactivos</li>
+					<li>Atributos globales</li>
+				</ol>
+			</li>
+			<li>XML
+				<ol>
+					<li>Qué es un XML</li>
+					<li>HTML (y HTML5) como tipo de XML. XHTML</li>
+					<li>Los XML relevantes en EPUB3: OPS, OPF, OBPS
+						<ol>
+							<li>OPS</li>
+							<li>OPF</li>
+							<li>OBPS</li>
+							<li>Compatibilidad con NCX</li>
+						</ol>
+					</li>
+				</ol>
+			</li>
+			<li>Otros estándares importantes en el libro digital
+				<ol>
+					<li>La importancia de escoger el juego de caracteres adecuado</li>
+					<li>HTML entities</li>
+					<li>Estándares de saltos de línea</li>
+					<li>Estándares audiovisuales: formatos de gráfico, vídeo y audio incrustado</li>
+					<li>El estándar de compresión ZIP</li>
+				</ol>
+			</li>
+			<li>Los estándares propios: buenas prácticas en edición digital
+				<ol>
+					<li>Inteligibilidad, unificación, coherencia intelectual y técnica</li>
+					<li>El libro de estilo del editor</li>
+				</ol>
+			</li>
+			<li>CSS
+				<ol>
+					<li>Qué son y para qué sirven las CSS</li>
+					<li>Gestión de fuentes</li>
+					<li>Títulos y encabezados
+						<ol>
+							<li>El problema de las versalitas y capitulares</li>
+						</ol>
+					</li>
+					<li>Párrafos, estrofas, diálogos</li>
+					<li>Citas: en bloque y en línea</li>
+					<li>Listas</li>
+					<li>Gráficos y tablas</li>
+					<li>El libro digital de tamaño fijo</li>
+				</ol>
+			</li>
+			<li>Libros interactivos con scripts, audio y vídeo</li>
+			<li>XSLT
+				<ol>
+					<li>La necesidad de transformar un XML</li>
+					<li>Posibilidades de uso: casos prácticos
+						<ol>
+							<li>Retrocompatibilidad con NCX</li>
+							<li>Archivos corruptos</li>
+						</ol>
+					</li>
+				</ol>
+			</li>
+			<li>Conclusión: la importancia de los estándares para la edición semántica</li>
+		</ol>
+		
+
+
+
+
+
+
+		<h1>XML y HTML: edición semántica</h1>
+		<h1>Qué son los lenguajes de marcado</h1>
+		<h1>Prehistoria e historia de los lenguajes de marcado</h1>
+		<h2>Los lenguajes de marcado en la era de la imprenta</h2>
+		<p>Desde que existe el texto existen los copistas y, por tanto, las marcas, las indicaciones que daban estos a un futuro lector —o copista— sobre cómo interpretar el texto, dónde hacer las pausas, cómo entenderlo. Una primera estandarización informal de las marcas en el texto se produjo con la invención por parte de Gutenberg de la imprenta de tipos móviles. Los copistas y tipógrafos de toda Europa manejaban conjuntos de marcas más o menos coincidentes que les ayudaban a componer el texto. Los manuscritos de autor incluían instrucciones que indicaban el tipo de letra, el estilo o el tamaño con que debía ser representado el texto, entre otras indicaciones de presentación.</p>
+		<p>A estas indicaciones se las llamaba marcas y existía un buen número de ellas conocidas y manejadas informalmente por los tipógrafos. Con la introducción de los ordenadores, los informáticos tomaron prestada de los editores la idea de desarrollar un lenguaje de marcado que les ayudara a estructurar correctamente la documentación que manejaban.</p>
+		<h2>Los inicios de los lenguajes de marcado modernos: William W. Tunicliffe</h2>
+		<p>Fue <a href="http://xml.coverpages.org/tunnicliffe.html">William W. Tunnicliffe</a> el primero que pensó en separar adecuadamente la estructura de un texto de su presentación, para evitar equívocos. Tunnicliffe encendió la mecha del marcado semántico durante una presentación ante el departamento de publicaciones del Gobierno de Canadá en 1967. Ingeniero especializado en física aplicada por la universidad de Harvard, él era por aquel entonces presidente del Comité de Composición de la Asociación de Artes Gráficas. El título de su intervención era <cite lang="en">«The separation of information content of documents from their format»</cite> o, lo que es lo mismo, <cite>La separación entre contenido y formato de una información en los documentos</cite>.</p>
+		<p><a href="http://en.wikipedia.org/wiki/Charles_Goldfarb" lang="en">Charles Goldfarb</a>, conocido como «padre» de SGML y por tanto abuelo de HTML, lo explica así en su libro <span title="Manual de SGML"><cite lang="en">The SGML Handbook</cite></span>.</p>
+		<blockquote>
+			Historically, electronic manuscripts contained control codes or macros that caused the document to be formatted in a particular way ("specific coding"). In contrast, generic coding, which began in the late 1960s, uses descriptive tags (for example, "heading", rather than "format-17"). Many credit the start of the generic coding movement to a presentation made by William Tunnicliffe, chairman of the Graphic Communications Association (GCA) Composition Committee, during a meeting at the Canadian Government Printing Office in September 1967: his topic -- the separation of information content of documents from their format.
+		</blockquote>
+		<p>La primera persona que expresó la necesidad de estandarizar adecuadamente el marcado de los textos de acuerdo a su función y no a elecciones particulares de presentación fue un grafista que se había formado como ingeniero. Hoy el camino que tienen que recorrer muchos en el sector de la edición es justamente el contrario: pasar de lo que suele entenderse como «ciencias» a lo que suele denominarse «letras». En este curso demostraremos que tal distinción tiene una importancia anecdótica y que la tarea intelectual de editar un texto no depende tanto de la herramienta utilizada o del soporte en el que se muestra como de lo que se pretende transmitir con ese texto. Y para ello el mejor comienzo es explicar en qué consisten los lenguajes de marcado y cómo se clasifican.</p>
+		<h2>Ejemplos de lenguajes de marcado tempranos: fotocomposición, WordPerfect</h2>
+		<!-- preguntar a Jaume sobre fotocomposición -->
+		<p><img src="img/jacquardjersey.jpg" /></p>
+		<p>Cuando en 1805 Joseph Marie Jacquard inventó su famoso telar mecánico, no sabía que en realidad estaba creando el primer estándar moderno de lenguaje de marcado. Su artilugio utilizaba tarjetas perforadas para conseguir tejer patrones en la tela, permitiendo que hasta los usuarios más inexpertos pudieran elaborar complejos diseños. Todavía hoy se usan máquinas basadas en la invención de Jacquard de 1805, si bien el papel perforado ha sido sustituido por señales electrónicas.</p>
+		<p>El telar de Jacquard no solo fue un hito en la Revolución Industrial; también supuso la base de la revolución informática, ya que las tarjetas y, más adelante, las cintas perforadas —concebidas como una sola tarjeta continua— marcaron la evolución técnica de la prensa en el mundo. Las tarjetas perforadas sustituyeron en los setenta al pesado e insalubre sistema de la linotipia, que obligaba al obrero a inhalar del crisol los vapores del plomo fundido con que componía las páginas del periódico.</p>
+		<p><img src="img/carbon_crisol_fundicion_metales.jpg" title="un hombre utilizando un crisol" /></p>
+		<p><img src="img/LINOANTIC.jpg" title="prueba" width="1200" /></p>
+		<p>Las fotocomponedoras recogían la cinta perforada y según las indicaciones reproducían el texto en el tipo y tamaño de letra que se quería. El resultado salía en papel fotográfico. El personal cortaba y pegaba el texto, encajándolo en la maqueta como si fuera un puzzle, junto a las fotos e ilustraciones.</p>
+		<p>Lógicamente, si el fotocomponedor ha de perforar una cinta para comunicarse con la máquina, debe hacerlo de una determinada forma, con un determinado estándar. Es decir, debe usar un lenguaje que entienda la máquina.</p>
+		<p>El estándar de codificación de caracteres más primitivo fue el de Baudot, que se remonta al siglo XIX y tenía tan solo cinco agujeros. Más adelante se crearon otros estándares con seis agujeros, como el Fieldata y el Flexowriter. A comienzos de la década de 1960, la Asociación Americana de Estándares (<span lang="en">American Standards Association</span>, <abbr lang="en">ASA</abbr>) llevó a cabo un proyecto para desarrollar un código universal para el procesamiento de datos, que sería conocido como ASCII. Este código de siete niveles, con 128 caracteres, fue adoptado por algunos fabricantes de teletipos, como AT&T (Teletype). Otros, como Telex, siguieron empleando el viejo Baudot.</p>
+		<p>Pero ASCII no solamente ha permitido a los grandes medios de comunicación transmitir titulares de forma fiable y sencilla. También nos ha dejado curiosos ejemplos de ASCII Art, o la versión informática de dibujar intrincados arabescos en la esquina del cuaderno mientras el profesor explica una aburrida lección sobre lenguajes de marcado.</p>
+		<img src="http://upload.wikimedia.org/wikipedia/commons/4/4a/Wikipedia-Ascii.png" title="ejemplo de ASCII art" alt="ejemplo de ASCII art" />
+		<p>Volveremos a hablar sobre ASCII cuando tratemos sobre los distintos estándares de codificación de caracteres del libro digital. De momento es importante quedarse con la idea de que los lenguajes de marcado empiezan antes de lo que parece evidente.</p>
+		<p>Desde el momento en el que nace la imprenta y hay una diferenciación entre los textos manuscritos y los textos impresos, es necesario utilizar marcas sobre el original con instrucciones para su copia o impresión.</p>
+		<h1>Tipos de lenguaje de marcado</h1>
+		<h2>Marcado de presentación</h2>
+		<p>De manera similar a como ocurre con el ASCII Art, los lenguajes de marcado comenzaron siendo estrictamente presentacionales. Este tipo de marcado es útil para maquetar la presentación de un documento para su lectura, pero resulta ineficiente para el procesamiento automático de la información. El marcado de presentación resulta más fácil de elaborar si hablamos de textos breves. Sin embargo es muy ineficiente, ya que resulta complicado de mantener o modificar.</p>
+		<p>Se puede tratar de averiguar la estructura de un documento de esta clase buscando pistas en el texto. Por ejemplo, el título puede ir precedido de varios saltos de línea y estar ubicado en el centro de la página. Algunos programas pueden deducir la estructura del texto basándose en esta clase de datos, aunque el resultado suele ser bastante mediocre.</p>
+		<h2>Marcado procedimental</h2>
+		<p>El marcado de procedimientos o procedimental consiste en marcar el texto de forma que el ordenador pueda procesar unas instrucciones. Se le indica al ordenador qué debe hacer con componentes específicos del texto. Por ejemplo, el título de una sección principal deberá tener instrucciones que indiquen a la impresora que debe centrar el texto o utilizar una fuente de un tamaño de terminado, probablemente además en negrita y cursiva. La mayoría de lenguajes procedimentales se caracterizan por estar pensados para el papel, es decir, le dicen a la impresora cómo plasmar el texto en el papel. Es un acercamiento algo más abstracto al problema de la estructuración de los documentos, pero al estar usualmente orientado a la presentación en un solo formato (típicamente el papel) su traducción a otros lenguajes de marcado es difícil y tediosa. No es fácil, por ejemplo, pasar un texto de TeX a Microsoft Word<a class="asterisco" href="#ast1">*</a> y viceversa.</p>
+		<p class="notaasterisco" id="ast1">* Word antes, del mismo modo que WordPerfect, utilizaba un marcado procedimental puro. Desde que se pueden producir con Word documentos acabados en x como .docx se supone (y es mucho suponer) que estos documentos se estructuran mediante marcado semántico.</p>
+		<p>Algunos ejemplos de marcado de procedimientos son nroff, troff, PostScript y TeX. Este tipo de marcado se ha usado extensivamente en aplicaciones de edición profesional, manipulados (cuando son legibles por humanos) por tipógrafos cualificados, ya que puede llegar a ser extremadamente complejo.</p>
+		<h2>Marcado descriptivo o semántico</h2>
+		<p>El marcado descriptivo o declarativo identifica los componentes lógicos de los documentos. Mientras que el marcado procedimental especifica un procedimiento particular que debe aplicarse al componente de un documento, el marcado descriptivo indica <em>qué</em> es el componente, lo define. El marcado descriptivo es la herramienta que nos permite dividir un libro en capítulos, epígrafes, títulos, secciones, párrafos, autores y editores. Además, nos permite añadir metadatos para una mejor catalogación. Ninguna de estas etiquetas nos indica qué procedimientos gráficos deben aplicarse a estos componentes. Pero, si conoces la estructura del documento, puedes indicar instrucciones de presentación según el contexto y formato del documento.</p>
+		<!-- fin intro -->
+		<h1>HTML5</h1>
+		<p>Todos los elementos del estándar HTML5 están listados aquí, descritos por su etiqueta de apertura y agrupados por su función. Contrariamente a otros índices, que listan todas las posibles etiquetas, las recogidas en el estándar y las que no, válidas, obsoletas o en desuso, esta lista solamente recoge los elementos válidos de HTML5. Solamente aquellos elementos listados aquí son los que deberían ser usados en un documento que utilice el estándar HTML5, como por ejemplo un libro digital con el estándar EPUB3.</p>
+		<p>El símbolo <img src="" title="HTML5" alt="HTML5" /> indica que el elemento fue añadido en HTML5. Nótese que otros elementos listados aquí pueden haber modificado o extendido su significado por la especificación HTML5.</p>
+		<h2>Estructura de un documento HTML5</h2>
+		<!-- https://developer.mozilla.org/es/docs/HTML/HTML5/HTML5_lista_elementos -->
+		<h2>Elemento raíz, doctype</h2>
+		<h3>Elemento raíz</h3>
+		<dl class="def">
+			<dt><code>&lt;html&gt;</code></dt>
+			<dd>Representa la raíz de un documento HTML o XHTML. Todos los demás elementos deben ser descendientes de este elemento.</dd>
+		</dl>
+		<p>Es recomendable indicar el idioma principal en el que está escrito un documento ya desde su etiqueta raíz con el atributo <code>lang</code>. Por ejemplo, <code class="prettyprint">&lt;html lang="es"&gt;</code> indicaría que este documento está escrito en HTML5.</p>
+		<p>Asimismo, también es recomendable indicar si el texto se escribe de izquierda a derecha o de derecha a izquierda con el atributo <code>dir</code>. El atributo <code>version</code> está desaprobado. Antiguamente hacía la función que hoy tiene el <code>DOCTYPE</code>.</p>
+		<div class="resalto">
+			<p>Aunque habitualmente hablamos, por abreviar, de HTML5, los libros en formato EPUB3 se basan en XHTML5, que es la versión XML de este lenguaje de marcado.</p>
+			Los libros en EPUB3 <strong>deben</strong> usar la <a href="http://www.w3.org/TR/html5/the-xhtml-syntax.html#the-xhtml-syntax" title="sintaxis XHTML">sintaxis XHTML5</a>, que es casi totalmente coincidente con la sintaxis HTML5 y se diferencia solamente en algunos detalles:</p>			
+			<dl>
+				<dt>XHTML5 en EPUB3</dt>
+				<dd>Requiere sintaxis XML: <strong>cierre y anidamiento correcto</strong> de las etiquetas.</dd>
+				<dd>Requiere una <strong>cabecera de documento bien formada</strong> y con un doctype adecuado.</dd>
+				<dd>Requiere el uso de la extensión <code>.xhtml</code> en detrimento de la extensión <code>.html</code> comúnmente usada en la web.</dd>
+				<dd>Todo esto se resume en que un documento XHTML5 para EPUB3 debe validarse <strong>simultáneamente</strong> como HTML y como XML.</dd>
+			</dl>
+			<p>Este sería el comienzo de un capítulo cualquiera de un libro EPUB3 en XHTML5:</p>
+			<pre class="prettyprint"><code>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es"&gt;
+	&lt;head&gt;
+		&lt;meta charset="UTF-8"&gt;
+		&lt;title&gt;Capítulo 1&lt;/title&gt;
+		&lt;link rel="stylesheet" type="text/css" href="stylesheet.css"/&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;Capítulo 1&lt;/h1&gt;
+		&lt;p&gt;Contenido del capítulo&lt;/p&gt;
+		&lt;p xml:lang="it" lang="it"&gt;Contenido del capítulo en italiano&lt;/p&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+		<p>Si estuviera en una página web, al no tener necesidad expresa de validar también como XML, el capítulo podría comenzar así:</p>
+		<pre class="prettyprint"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+	&lt;head&gt;
+		&lt;meta charset="UTF-8"&gt;
+		&lt;title&gt;Capítulo 1&lt;/title&gt;
+		&lt;link rel="stylesheet" type="text/css" href="stylesheet.css"/&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;Capítulo 1&lt;/h1&gt;
+		&lt;p&gt;Contenido del capítulo&lt;/p&gt;
+		&lt;p lang="it"&gt;Contenido del capítulo en italiano&lt;/p&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+		</code></pre>
+		<p>Como puedes ver, las diferencias son mínimas y se atañen a la cabecera del documento.</p>
+		<p>Algunos atributos, como el idioma del documento, tienen una doble declaración, con sintaxis HTML y XML. Esto, que nos supone teclear unas pocas instrucciones redundantes, nos asegura que nuestro libro se verá adecuadamente en contextos de uso extraños o aparatos de lectura antiguos. Lo mejor es que copies en algún sitio cómodo para ti el primer ejemplo a modo de plantilla, y a partir de ahora lo uses, modificando detalles como el idioma o idiomas en que está escrito el documento o el título del capítulo.</p>
+		</div>
+		<p>Todo documento HTML debe contener un elemento <code>&lt;head&gt;</code> y un elemento <code>&lt;body&gt;</code>.</p>
+		<div class="resalto">
+			<p>La etiqueta <code>&lt;html&gt;</code>, que contiene a todas las demás, requiere abrirse y cerrarse. Esto significa que al principio del documento debe haber una etiqueta <code>&lt;html&gt;</code> de apertura y una etiqueta <code>&lt;/html&gt;</code> de cierre. Así:</p>
+			<pre class="prettyprint"><code>
+	&lt;html&gt;
+		&lt;head&gt;
+			metadatos
+		&lt;/head&gt;
+		&lt;body&gt;
+			cosas
+		&lt;/body&gt;
+	&lt;/html&gt;</code></pre>
+		</div>
+		<p>Un documento HTML bien formado se parece a un árbol. Un buen indentado ayuda a mejorar la sintaxis HTML y detectar los errores más rápido.</p>
+		<p>Más adelante verás que en HTML hay dos tipos de etiquetas:</p>
+		<dl>
+			<dt>Etiquetas de apertura y cierre</dt>
+			<dd>Pueden (y en algunos casos <em>deben</em>, como le ocurre a la etiqueta html) encerrar otras etiquetas en su interior y por eso necesitan una versión de apertura y otra de cierre.<br />
+			La etiqueta <code class="prettyprint">&lt;html&gt; … &lt;/html&gt;</code> es un ejemplo. La etiqueta de párrafo <code class="prettyprint">&lt;p&gt; … &lt;/p&gt;</code> es otro.</dd>
+			<dt>Etiquetas de autocierre</dt>
+			<dd>No pueden contener otras etiquetas dentro, por lo que deben autocerrarse.<br />
+				La etiqueta de imagen <code class="prettyprint">&lt;img src="imagen.jpg" title="título de la imagen" alt="texto alternativo por si no se muestra" /&gt;</code> es el ejemplo más común.</dd>
+		</dl>
+		<p>No te preocupes si al principio te lías y crees que no vas a recordar cuándo una etiqueta es de apertura y cierre y cuándo de autocierre. En la mayoría de los casos lo deducirás perfectamente, y si no siempre puedes consultar la referencia.</p>
+		<h3>Declaración XML</h3>
+		<p>Es la primera línea de cualquier documento XHTML5 y tiene este aspecto:</p>
+		<pre class="prettyprint"><code>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+		</code></pre>
+		<p>Simplemente indica que se trata de un documento XML con codificación de caracteres UTF-8. En un documento XHTML5 para EPUB3 esta es siempre la primera línea.</p>
+		<h3>Doctype</h3>
+		<p>Una vez has declarado que tu documento es un XML, la declaración <code>&lt;!DOCTYPE&gt;</code> debe ser lo primero que aparezca en tu documento HTML, antes incluso de la etiqueta <code>&lt;html&gt;</code>. Esta declaración le dice al software que vaya a interpretar el documento (como un navegador web o el software de los aparatos que sirven para leer libros digitales) que, además de un XML, lo que viene a continuación es un documento HTML.</p>
+		<p>La declaración <code>&lt;!DOCTYPE&gt;</code> no es una etiqueta HTML; es una instrucción al navegador o cliente, para que sepa en qué versión de HTML está escrito el documento.</p>
+		<p>Antes de HTML5 las declaraciones <code>&lt;!DOCTYPE&gt;</code> eran más largas y farragosas. Por ejemplo, en la declaración <code>&lt;!DOCTYPE&gt;</code> de HTML 4.01 se referencia un <abbr title="Document Type Definition">DTD</abbr>, porque HTML 4.01 está basado en SGML, un lenguaje de marcado de los ochenta. El DTD especifica las reglas para el lenguaje de marcado que se haya especificado en el <code>&lt;!DOCTYPE&gt;</code>, de manera que el navegador pueda mostrar el contenido correctamente. HTML5 no se basa en SGML, por lo que no necesita hacer referencia a ningún DTD. Basta con definir nuestro documento como HTML5 para que el navegador del dispositivo que estamos usando lo entienda.</p>
+		<p>Los doctypes de versiones más antiguas de HTML eran más largos porque el lenguaje HTML se basaba en SGML, así que requería una referencia a un DTD. El caso ya no se da y el doctype solamente hace falta para habilitar el modo estándar para documentos escritos con sintaxis HTML. Los navegadores ya saben lo que tienen que hacer si pones solamente <code>&lt;!DOCTYPE&gt;</code>.</p>
+		<p>Para que te hagas una idea de lo que se ha simplificado el DOCTYPE en HTML5, a continuación voy a mostrar su evolución con algunos ejemplos:</p>
+		<p>HTML 3.2</p>
+		<pre class="prettyprint"><code>
+	&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN"&gt;
+		</code></pre>
+		<p>HTML 4.01 Transitional</p>
+		<pre class="prettyprint"><code>
+	&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+		</code></pre>
+		<p>XHTML 1.0 Strict</p>
+		<pre class="prettyprint"><code>
+	&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+		</code></pre>
+		<p>XHTML 1.1</p>
+		<pre class="prettyprint"><code>
+	&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;
+		</code></pre>
+		<p>Y, finalmente, el descanso de HTML5</p>
+		<pre class="prettyprint"><code>
+	&lt;!DOCTYPE html&gt;
+		</code></pre>
+		<p>Qué alivio, ¿eh?</p>
+		<p>Ya que el Doctype de HTML5 es tan sencillo, no te saltes ese paso.</p>
+		<h2>Metadatos del documento</h2>
+		<p>Hemos dicho antes que la raíz de un documento HTML es la propia etiqueta <code>&lt;html&gt;</code>. Inmediatamente después el documento HTML se divide en dos partes, la que especifica los metadatos del documento y la que especifica su contenido. De esta manera, un documento HTML tiene esta estructura básica:</p>
+		<pre class="prettyprint"><code>
+	<!DOCTYPE html>
+	&lt;html&gt;
+		&lt;head&gt;
+			Metadatos
+		&lt;/head&gt;
+		&lt;body&gt;
+			Cosas
+		&lt;/body&gt;
+	&lt;/html&gt;
+		</code></pre>
+		<p>Por lo tanto, la etiqueta que contendría los metadatos sería <code>&lt;head&gt;</code> y la que contendría las «cosas» o el contenido del documento sería <code>&lt;body&gt;</code>. Ahora vamos a hablar de <code>&lt;head&gt;</code>.</p>
+		<h3>Etiqueta &lt;head&gt;</h3>
+		<p>Esta etiqueta contiene información sobre el documento. Es una etiqueta que se abre y se cierra, por lo que la forma de inicio es <code>&lt;head&gt;</code> y la de cierre es <code>&lt;/head&gt;</code>. Es la cabecera del documento.</p>
+		<p>La etiqueta <code>&lt;head&gt;</code> <strong>debe contener</strong> una etiqueta <code>title</code> y puede contener una etiqueta <code>base</code>.</p>
+		<h4>Etiqueta &lt;meta&gt;</h4>
+		<p class="resalto">Debe haber al menos una etiqueta <code>meta</code> que indique en qué juego de caracteres está escrito nuestro documento. Por ejemplo <code class="prettyprint">&lt;meta charset="utf-8" /&gt;</code>.</p>
+		<p>La etiqueta <code>meta</code> permite en realidad un abanico mucho mayor de posibilidades, pero de momento  basta con saber que, antes de darle el título del documento al navegador, este debe identificar correctamente los caracteres con que está escrito. No es lo mismo un documento en chino que en castellano, y por eso ya antes de que se muestre la primera palabra (que se mostrará en la etiqueta <code>title</code>) el navegador debe conocer el juego de caracteres que se usará en el documento.</p>
+		<p>Es recomendable que, por accesibilidad, el juego de caracteres establecido sea <code>utf-8</code>. Más adelante volveremos sobre este tema.</p>
+		<p>La etiqueta <code>meta</code> es de autocierre porque no puede contener otras etiquetas, especifica los datos necesarios mediante <strong>atributos</strong>. En el ejemplo de antes, <code>charset</code> es un atributo con valor <code>utf-8</code>.</p>
+		<p>No olvides que cuando declares que estás usando caracteres utf-8, al igual que con el idioma, debes ser redundante:</p>
+		<pre class="prettyprint"><code>
+<mark>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</mark>
+&lt;!DOCTYPE html&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es"&gt;
+	&lt;head&gt;
+		<mark>&lt;meta charset="UTF-8"&gt;</mark>
+		</code></pre>
+		<h4>Etiqueta &lt;title&gt;</h4>
+		<p>La etiqueta <code>title</code> es de apertura y cierre:</p>
+		<p class="resalto"><code class="prettyprint">&lt;title&gt;Título del documento&lt;/title&gt;</code></p>
+		<p>Es imprescindible, por accesibilidad y por salud mental, que todo documento HTML tenga una y solo una etiqueta <code>title</code>. Esta etiqueta debe ir justo detrás de la etiqueta <code>meta</code> que indica el juego de caracteres utilizado. Si tu documento no tiene etiqueta <code>title</code>, <strong>no validará</strong> como HTML.</p>
+		<p>La etiqueta <code>title</code>, por tanto:</p>
+		<ul>
+			<li>Es imprescindible.</li>
+			<li>Aparece una sola vez en el documento, en su encabezado.</li>
+			<li>Debe aparecer <strong>después</strong> de declarar el juego de caracteres.</li>
+		</ul>
+		<h4>Etiqueta &lt;link&gt;</h4>
+		<p>La etiqueta <code>link</code> permite a los autores enlazar sus documentos a otros recursos. El atributo <code>href</code> de esta etiqueta establece el archivo de destino. Este atributo es <strong>obligatorio</strong>. Si una etiqueta <code>link</code> no tiene atributo <code>href</code>, en la práctica es como si no hubiéramos puesto la etiqueta.</p>
+		<p>Otro atributo obligatorio de la etiqueta <code>link</code> es <code>rel</code>. El atributo <code>rel</code> nos indica qué función tiene el archivo que estamos referenciando en el atributo <code>href</code>: si se trata de una hoja de estilo, un script, un favicon… A nosotros de momento nos interesa la etiqueta <code>link</code> como medio de referenciar hojas de estilo, por lo que el atributo de <code>link</code> que veremos más a menudo es <code>stylesheet</code>.</p>
+		<div class="resalto">
+			<p>Aunque la etiqueta <code>link</code> tiene muchas posibilidades de uso, habitualmente la primera vez que nos la encontramos es para referenciar una hoja de estilo. Suele tener un aspecto parecido a este:</p>
+			<pre class="prettyprint"><code>
+	&lt;link rel="stylesheet" type="text/css" href="style.css" /&gt;
+			</code></pre>
+		</div>
+		<h4>Etiqueta &lt;base&gt;</h4>
+		<p>La etiqueta opcional <code>base</code> permite a los autores especificar la URL base del documento con el propósito de que las URL relativas se muestren correctamente y establecer una carpeta base (de ahí su nombre) para escribir los enlaces internos del documento de forma más cómoda para el autor. Si se usa esta etiqueta, solamente debe aparecer una vez en un documento HTML. Puedes ver en <a href="http://www.w3.org/html/wg/drafts/html/master/Overview.html#the-base-element">la web del W3C</a> cómo debe utilizarse. Esta etiqueta es de autocierre. Como se indica en <a href="http://stackoverflow.com/questions/1889076/is-it-recommended-to-use-the-base-html-tag">http://stackoverflow.com/questions/1889076/is-it-recommended-to-use-the-base-html-tag</a> su comportamiento en distintos entornos es poco consistente, por lo que recomendamos usarla con precaución, si decides hacerlo.</p>
+		<h4>Organización de la cabecera de un documento HTML</h4>
+		<p>El encabezado de un documento HTML típico debe constar al menos de:</p>
+		<ol>
+			<li>Un <code>DOCTYPE</code></li>
+			<li>Una etiqueta <code>html</code> de apertura (no olvides que al final hay otra de cierre)</li>
+			<li>Una etiqueta <code>&lt;head&gt;</code> de apertura y otra <code>&lt;/head&gt;</code> de cierre
+				<ol>
+					<li>Una etiqueta <code>meta</code> autocerrada que especifique el juego de caracteres utilizado</li>
+					<li>Una <strong>única</strong> etiqueta <code>title</code> con el título del documento</li>
+					<li>Una etiqueta <code>link</code> autocerrada que indique la ruta de la hoja de estilos del documento</li>
+				</ol>
+			</li>
+		</ol>
+		<p>Recordemos que todo documento HTML debe parecerse a un árbol.</p>
+		<p><pre class="prettyprint"><code>
+	&lt;!DOCTYPE html&gt;
+	&lt;html&gt;
+		&lt;head&gt;
+			Metadatos
+		&lt;/head&gt;
+		&lt;body&gt;
+			Cosas
+		&lt;/body&gt;
+	&lt;/html&gt;
+		</code></pre>
+		<p>En la edición de documentos HTML, el <strong>indentado</strong> es clave para situarnos correctamente en el documento e identificar correctamente los errores.</p>
+		<h2>Scripting</h2>
+		<p>En los libros digitales de texto corrido el scripting es inexistente o casi. No obstante, debes saber que existe la posibilidad de forzar comportamientos dinámicos, al modo de los libros con pop ups para niños en un libro digital. Los libros que llevan scripts en su interior suelen estar concebidos exclusivamente para tablets, y frecuentemente para un solo modelo de tablet (iPad, Kindle Fire, etc) que se sabe que se comporta adecuadamente con scriptings testados en exclusiva para ese modelo. Existe el debate de si estos archivos empaquetados junto con scripts podrían seguir llamándose libros o deberían llamarse videojuegos.</p>
+		<p>El objetivo de este curso es que el alumno adquiera habilidades de editor universal mediante buenas prácticas como la edición semántica y la promoción de la accesibilidad; los desarrollos ad hoc, pensados para un solo objeto tecnológico, no son universalistas y difícilmente son accesibles. No obstante, el alumno debe saber que el estándar EPUB3 permite la incorporación de scripts, habitualmente mediante la etiqueta <code>script</code>. En el caso de que sea imprescindible incluir scripts en un libro, recomendamos destinarles una carpeta aparte y enlazarlos mediante el atributo <code>src</code> de la etiqueta <code>script</code>.</p>
+		<pre class="prettyprint"><code>
+	&lt;script type="text/javascript" src="../scripts/scriptFile.js"&gt;&lt;/script&gt;
+		</code></pre>
+		<p>Por accesibilidad, si se usa la etiqueta <code>script</code>, recomendamos usar también la etiqueta <code>noscript</code> para advertir a aquellos usuarios que intenten leer el libro en un aparato que no soporte scripts.</p>
+		<pre class="prettyprint"><code>
+	&lt;noscript&gt;Te has comprado un libro que no vas a poder leer porque tu aparato de lectura no soporta scripts. ¡Mala suerte!&lt;/noscript&gt;
+		</code></pre>
+		<h2>Contenido</h2>
+		<p>Si dividiéramos todas las etiquetas HTML en categorías, según el W3C nos quedaría una lista más o menos así:</p>
+		<ul>
+			<li>Contenido de metadatos</li>
+			<li>Contenido fluido</li>
+			<li>Secciones</li>
+			<li>Encabezados</li>
+			<li>Fraseo</li>
+			<li>Contenido embebido</li>
+			<li>Contenido interactivo</li>
+		</ul>
+		<img src="img/contenidogeneral.png" title="diagrama de tipos de contenido del W3C" />
+		<p>La lista parece sencilla, pero hay etiquetas HTML que no entran en ninguna de estas categorías y hay otras etiquetas que entran en una, dos o más de estas categorías. Aunque nos referiremos en ocasiones a la clasificación del W3C, usualmente utilizaremos la clasificación de la fundación Mozilla o haremos un pastiche entre ambas.</p>
+		<h3>Secciones</h3>
+		<p>Según el W3C, hay cuatro etiquetas que se podrían agrupar en el contenido de tipo sección:</p>
+		<ul>
+			<li><code>article</code></li>
+			<li><code>aside</code></li>
+			<li><code>nav</code></li>
+			<li><code>section</code></li>
+		</ul>
+		<img src="img/articleasidenavsection.gif" title="etiquetas article, aside, nav y section en un uso típico" />
+		<p>El W3C no entiende las etiquetas <code>header</code>, <code>main</code> o <code>footer</code> como etiquetas de sección, aunque la Fundación Mozilla sí. Según Mozilla las etiquetas de tipo «sección» son las siguientes:</p>
+		<ul>
+			<li><code>body</code></li>
+			<li><code>section</code></li>
+			<li><code>nav</code></li>
+			<li><code>article</code></li>
+			<li><code>aside</code></li>
+			<li><code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, <code>h6</code></li>
+			<li><code>header</code></li>
+			<li><code>footer</code></li>
+			<li><code>address</code></li>
+			<li><code>main</code></li>
+		</ul>
+		<h4>Etiqueta &lt;body&gt;</h4>
+		<p>La etiqueta <code>body</code> representa el contenido principal de un documento HTML. Solo hay un elemento <code>body</code> en un documento. Es una etiqueta de apertura y cierre. Puedes ver cómo se utiliza aquí:</p>
+		<p><pre class="prettyprint"><code>
+	&lt;!DOCTYPE html&gt;
+	&lt;html&gt;
+		&lt;head&gt;
+			Metadatos
+		&lt;/head&gt;
+		&lt;body&gt;
+			Contenido
+		&lt;/body&gt;
+	&lt;/html&gt;
+		</code></pre>
+		<div class="resalto">
+			<p>No puede ni debe haber <em>contenido</em> fuera de <code>body</code>. Si algo está fuera de body, no es contenido.</p>
+			<p>La etiqueta <code>body</code> sigue a la etiqueta <code>head</code> y se abre inmediatamente después de que se cierre esta. Engloba todo el contenido del documento HTML y, por último, se cierra justo antes del cierre de la etiqueta <code>html</code>.</p>
+		</div>
+		<p>La etiqueta <code>body</code> es el contenedor absoluto.</p>
+		<p>Continuando con el símil arbóreo que ya hemos usado en alguna ocasión, si la etiqueta <code>head</code> vienen a ser las raíces del árbol, la etiqueta <code>body</code> incluye el tronco y la copa del árbol.</p>
+		<h4>Etiqueta &lt;section&gt;</h4>
+		<p>La etiqueta &lt;section&gt; define, como su propio nombre indica, una sección en un documento HTML. Es una etiqueta de apertura y cierre que se creó en el estándar HTML5.</p>
+		<p>Esta etiqueta se creó para representar una sección genérica de un documento, por ejemplo una agrupación temática de contenido, normalmente con un encabezado (una etiqueta del rango <code>h1</code>—<code>h6</code>) como hijo del elemento <code>section</code>.</p>
+		<p>No es una buena idea usar <code>section</code> como contenedor genérico o para maquetar un documento. Es una buena idea crear un elemento <code>section</code> si te lo imaginas en el índice del documento.</p>
+		<p>La etiqueta <code>section</code> se usa poco en libros digitales porque lo habitual en un libro digital es que cada capítulo sea un documento HTML en sí mismo, con su propio encabezado y contenido. No obstante, si en los capítulos de tu libro hay más subdivisiones temáticas (esto ocurre mucho con manuales y libros académicos) usar la etiqueta <code>section</code> ayudará a establecer las divisiones temáticas de tu libro con precisión.</p>
+		<p>El WhatWG, creador del <i class="extranjero" lang="en">living standard</i> de HTML (en contraposición al estándar «estable» del W3C) dice lo siguiente acerca de la etiqueta <code>section</code>:</p>
+		<blockquote lang="en">
+			<p>Sections may contain headings of any rank, but authors are strongly encouraged to either use only <code>h1</code> elements, or to use elements of the appropriate rank for the section's nesting level.</p>
+			<p>Authors are also encouraged to explicitly wrap sections in elements of sectioning content, instead of relying on the implicit sections generated by having multiple headings in one element of sectioning content.</p>
+		</blockquote>
+		<p>Por otro lado, el IDPF dice esto:</p>
+		<blockquote>
+			<p>A section should not have more than one child heading, as it is not clear how these will be handled in HTML5. Additional headings are treated a delimiting the beginning of an implied section, but the outlining algorithm that defines this behavior is at risk of being removed from the specification.</p>
+			<p>…</p>
+			<p>It is best to avoid using multiple headings at this time, as it is not clear how they are to be handled. The HTML5 outlining algorithm is at risk of being removed from the specification, which previously defined that new headings defined new implied sections. The <code>hgroup</code> element for defining a heading set has now been removed from HTML 5.0.</p>
+		</blockquote>
+		<p>Hasta ahora se asumía que el navegador podía «deducir» correctamente dónde empezaba y terminaba cada sección gracias al orden de aparición de los encabezados en él. No obstante, parece que los consorcios que regulan el estándar HTML5 e EPUB3 desean eliminar esta característica de los softwares de lectura, debido al continuo abuso de los encabezados por parte de los autores. Pero, como el uso de <code>section</code> no está todavía del todo extendido ni regulado, el IDPF nos pide que no incluyamos más de un encabezado en cada <code>section</code> porque no sabemos cómo va a comportarse el software de lectura.</p>
+		<p>Para que comprendas mejor el uso de la etiqueta <code>section</code>, vamos a exponer un caso de uso. Imagina que tienes el índice de un libro sobre el estándar EPUB3:</p>
+		<ol>
+			<li>Generalidades</li>
+			<li>Estructura</li>
+			<li>Historia
+				<ol>
+					<li>Formato EPUB3</li>
+				</ol>
+			</li>
+			<li>Uso</li>
+			<li>Críticas</li>
+			<li>Lectores
+				<ol>
+					<li>eReaders</li>
+					<li>Dispositivos multipropósito</li>
+					<li>Teléfonos inteligentes</li>
+					<li>PC
+						<ol>
+							<li>OS X (Mac)</li>
+						</ol>
+					</li>
+					<li>Herramientas de creación</li>
+				</ol>
+			</li>
+			<li>Referencias</li>
+		</ol>
+		<p>Si, por ejemplo, estuviéramos en el archivo HTML que corresponde al capítulo 6, «Lectores», nos quedaría un marcado parecido a este:</p>
+		<p><pre class="prettyprint"><code>
+	&lt;!DOCTYPE html&gt;
+	&lt;html lang="es"&gt;
+		&lt;head&gt;
+			&lt;title&gt;EPUB3 — Capítulo 6. Lectores
+		&lt;/head&gt;
+		&lt;body epub:type="bodymatter"&gt;
+			&lt;section epub:type="chapter"&gt;
+				&lt;h1&gt;Lectores&lt;/h1&gt;
+				&lt;p&gt;bla bla bla&lt;/p&gt;
+				&lt;section epub:type="subchapter"&gt;
+					&lt;h1&gt;eReaders&lt;/h1&gt;
+					&lt;p&gt;bla bla bla&lt;/p&gt;
+				&lt;/section&gt;
+				&lt;section epub:type="subchapter"&gt;
+					&lt;h1&gt;Dispositivos multipropósito&lt;/h1&gt;
+					&lt;p&gt;bla bla bla&lt;/p&gt;
+				&lt;/section&gt;
+				&lt;section epub:type="subchapter"&gt;
+					&lt;h1&gt;Teléfonos inteligentes&lt;/h1&gt;
+					&lt;p&gt;bla bla bla&lt;/p&gt;
+				&lt;/section&gt;
+				&lt;section epub:type="subchapter"&gt;
+					&lt;h1&gt;PC&lt;/h1&gt;
+					&lt;p&gt;bla bla bla&lt;/p&gt;
+					&lt;section&gt;
+						&lt;h1&gt;OS X (Mac)&lt;/h1&gt;
+						&lt;p&gt;bla bla bla&lt;/p&gt;
+					&lt;/section&gt;
+				&lt;/section&gt;
+				&lt;section epub:type="subchapter"&gt;
+					&lt;h1&gt;Herramientas de creación&lt;/h1&gt;
+					&lt;p&gt;bla bla bla&lt;/p&gt;
+				&lt;/section&gt;
+			&lt;/section&gt;
+		&lt;/body&gt;
+	&lt;/html&gt;
+		</code></pre>
+		<p>Habrás notado que la etiqueta <code>section</code> tiene el atributo <code>epub:type</code>. Esto responde a una extensión elaborada por el IDPF para dotar de mayor contenido semántico a los libros digitales. Existe un vocabulario muy rico para indicar de qué tipo es una sección en un libro digital de tipo EPUB3.</p>
+		<p>Esta es la lista de valores soportados por el atributo <code>epub:type</code>:</p>
+		<ul>
+			<li>Particiones de documento
+				<ul>
+					<li><code>cover</code></li>
+					<li><code>frontmatter</code></li>
+					<li><code>bodymatter</code></li>
+					<li><code>backmatter</code></li>
+				</ul>
+			</li>
+			<li>Divisiones del documento
+				<ul>
+					<li><code>volume</code></li>
+					<li><code>part</code></li>
+					<li><code>chapter</code></li>
+					<li><code>subchapter</code></li>
+					<li><code>division</code></li>
+				</ul>
+			</li>
+			<li>Secciones y componentes del documento
+				<ul>
+					<li><code>abstract</code> <span class="advertencia">[BORRADOR]</span></li>
+					<li><code>foreword</code></li>
+					<li><code>preface</code></li>
+					<li><code>prologue</code></li>
+					<li><code>introduction</code></li>
+					<li><code>preamble</code></li>
+					<li><code>conclusion</code></li>
+					<li><code>epilogue</code></li>
+					<li><code>afterword</code></li>
+					<li><code>epigraph</code></li>
+				</ul>
+			</li>
+			<li>Navegación por el documento
+				<ul>
+					<li><code>toc</code></li>
+					<li><code>toc-brief</code> <span class="advertencia">[BORRADOR]</span></li>
+					<li><code>landmarks</code></li>
+					<li><code>loa</code></li>
+					<li><code>loi</code></li>
+					<li><code>lot</code></li>
+					<li><code>lov</code></li>
+				</ul>
+			</li>
+			<li>Secciones de referencia del documento
+				<ul>
+					<li><code>appendix</code></li>
+					<li><code>colophon</code></li>
+					<li><code>credits</code> <span class="advertencia">[BORRADOR]</span></li>
+					<li><code>keywords</code> <span class="advertencia">[BORRADOR]</span></li>
+					<li>Índices
+						<ul>
+							<li><code>index</code></li>
+							<li><code>index-headnotes</code> <span class="advertencia">[BORRADOR]</span></li>
+							<li><code>index-legend</code> <span class="advertencia">[BORRADOR]</span></li>
+							<li><code>index-group</code> <span class="advertencia">[BORRADOR]</span></li>
+							<li><code>index-entry-list</code> <span class="advertencia">[BORRADOR]</span></li>
+							<li><code>index-entry</code> <span class="advertencia">[BORRADOR]</span></li>
+							<li><code>index-term</code> <span class="advertencia">[BORRADOR]</span></li>
+							<li><code>index-editor-note</code> <span class="advertencia">[BORRADOR]</span></li>
+							<li><code>index-locator</code> <span class="advertencia">[BORRADOR]</span></li>
+							<li><code>index-locator-list</code> <span class="advertencia">[BORRADOR]</span></li>
+							<li><code>index-locator-range</code> <span class="advertencia">[BORRADOR]</span></li>
+							<li><code>index-xref-preferred</code> <span class="advertencia">[BORRADOR]</span></li>
+							<li><code>index-xref-related</code> <span class="advertencia">[BORRADOR]</span></li>
+							<li><code>index-term-category</code> <span class="advertencia">[BORRADOR]</span></li>
+							<li><code>index-term-categories</code> <span class="advertencia">[BORRADOR]</span></li>
+						</ul>
+					</li>
+				<li>Glosarios
+					<ul>
+						<li><code>glossary</code></li>
+						<li><code>glossterm</code></li>
+						<li><code>glossdef</code></li>
+					</ul>
+				</li>
+				<li>Bibliografías
+					<ul>
+						<li><code>bibliography</code></li>
+						<li><code>biblioentry</code></li>
+					</ul>
+				</li>
+			</li>
+			<li>Secciones preliminares y componentes
+				<ul>
+					<li><code>titlepage</code></li>
+					<li><code>halftitlepage</code></li>
+					<li><code>copyright-page</code></li>
+					<li><code>seriespage</code> <span class="advertencia">[BORRADOR]</span></li>
+					<li><code>acknowledgments</code></li>
+					<li><code>imprint</code></li>
+					<li><code>imprimatur</code></li>
+					<li><code>contributors</code></li>
+					<li><code>other-credits</code></li>
+					<li><code>errata</code></li>
+					<li><code>dedication</code></li>
+					<li><code>revision-history</code></li>
+				</ul>
+			</li>
+			<li>Contenido complementario
+				<ul>
+					<li><code>case-study</code> <span class="advertencia">[BORRADOR]</span></li>
+					<li><code>help</code></li>
+					<li><code>marginalia</code> [OBSOLETO]</li>
+					<li><code>notice</code></li>
+					<li><code>pullquote</code> <span class="advertencia">[BORRADOR]</span></li>
+					<li><code>sidebar</code> <span class="advertencia">[BORRADOR]</span></li>
+					<li><code>warning</code> <span class="advertencia">[BORRADOR]</span></li>
+				</ul>
+			</li>
+			<li>Títulos y encabezados
+				<ul>
+					<li><code>halftitle</code></li>
+					<li><code>fulltitle</code></li>
+					<li><code>covertitle</code></li>
+					<li><code>title</code></li>
+					<li><code>subtitle</code></li>
+					<li><code>label</code> <span class="advertencia">[BORRADOR]</span></li>
+					<li><code>ordinal</code> <span class="advertencia">[BORRADOR]</span></li>
+					<li><code>bridgehead</code></li>
+				</ul>
+			</li>
+			<li>Educational content
+				<ul>
+					<li>Learning objectives
+						<ul>
+							<li><code>learning-objective</code></li>
+							<li><code>learning-objectives</code> <span class="advertencia">[BORRADOR]</span></li>
+							<li><code>learning-outcome</code> <span class="advertencia">[BORRADOR]</span></li></li>
+							<li><code>learning-outcomes</code> <span class="advertencia">[BORRADOR]</span></li>
+							<li><code>learning-resource</code></li>
+							<li><code>learning-resources</code> <span class="advertencia">[BORRADOR]</span></li>
+							<li><code>learning-standard</code> <span class="advertencia">[BORRADOR]</span></li>
+							<li><code>learning-standards</code> <span class="advertencia">[BORRADOR]</span></li>
+						</ul>
+					</li>
+					<li>Testing
+						<ul>
+							<li><code>answer</code> <span class="advertencia">[BORRADOR]</span></li>
+							<li><code>answers</code> <span class="advertencia">[BORRADOR]</span></li>
+							<li><code>assessment</code></li>
+							<li><code>assessments</code> <span class="advertencia">[BORRADOR]</span></li>
+							<li><code>feedback</code> <span class="advertencia">[BORRADOR]</span></li>
+							<li><code>fill-in-the-blank-problem</code> <span class="advertencia">[BORRADOR]</span></li>
+							<li><code>general-problem</code> <span class="advertencia">[BORRADOR]</span></li>
+							<li><code>qna</code></li>
+							<li><code>match-problem</code> <span class="advertencia">[BORRADOR]</span></li></li>
+							<li><code>multiple-choice-problem</code> <span class="advertencia">[BORRADOR]</span></li>
+							<li><code>practice</code> <span class="advertencia">[BORRADOR]</span></li>
+							<li><code>practices</code> <span class="advertencia">[BORRADOR]</span></li>
+							<li><code>question</code> <span class="advertencia">[BORRADOR]</span></li>
+							<li><code>true-false-problem</code> <span class="advertencia">[BORRADOR]</span></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>Comics
+				<ul>
+					<li><code>panel</code> <span class="advertencia">[BORRADOR]</span></li>
+					<li><code>panel-group</code> <span class="advertencia">[BORRADOR]</span></li>
+					<li><code>balloon</code> <span class="advertencia">[BORRADOR]</span></li>
+					<li><code>text-area</code> <span class="advertencia">[BORRADOR]</span></li>
+					<li><code>sound-area</code> <span class="advertencia">[BORRADOR]</span></li>
+				</ul>
+			</li>
+			<li>Notas y glosas
+				<ul>
+					<li><code>annotation</code> [OBSOLETO]</li>
+					<li><code>note</code> [OBSOLETO]</li>
+					<li><code>footnote</code></li>
+					<li><code>rearnote</code></li>
+					<li><code>footnotes</code></li>
+					<li><code>rearnotes</code></li>
+				</ul>
+			</li>
+			<li>Referencias
+				<ul>
+					<li><code>annoref</code> [OBSOLETO]</li>
+					<li><code>biblioref</code> <span class="advertencia">[BORRADOR]</span></li>
+					<li><code>glossref</code> <span class="advertencia">[BORRADOR]</span></li>
+					<li><code>noteref</code></li>
+					<li><code>referrer</code> [OBSOLETO]</li>
+				</ul>
+			</li>
+			<li>Texto del documento
+				<ul>
+					<li><code>credit</code> <span class="advertencia">[BORRADOR]</span></li>
+					<li><code>keyword</code></li>
+					<li><code>topic-sentence</code></li>
+					<li><code>concluding-sentence</code></li>
+				</ul>
+			</li>
+			<li>Paginación
+				<ul>
+					<li><code>pagebreak</code></li>
+					<li><code>page-list</code></li>
+				</ul>
+			</li>
+			<li>Tablas (esta categoría se creó para un contexto de uso en HTML ya obsoleto. Es válida para su uso en <i class="extranjero">Media Overlays</i>, para aumentar la accesibilidad del documento)
+				<ul>
+					<li><code>table</code></li>
+					<li><code>table-row</code></li>
+					<li><code>table-cell</code></li>
+				</ul>
+			</li>
+			<li>Listas (esta categoría se creó para un contexto de uso en HTML ya obsoleto. Es válida para su uso en <i class="extranjero">Media Overlays</i>, para aumentar la accesibilidad del documento)
+				<ul>
+					<li><code>list</code></li>
+					<li><code>list-item</code></li>
+				</ul>
+			</li>
+			<li>Figuras (esta categoría se creó para un contexto de uso en HTML ya obsoleto. Es válida para su uso en <i class="extranjero">Media Overlays</i>, para aumentar la accesibilidad del documento)
+				<ul>
+					<li><code>figure</code></li>
+				</ul>
+			</li>
+		</ul>
+	</ul>
+		<p>Más información en:</p>
+		<ul>
+			<li><a href="http://www.idpf.org/accessibility/guidelines/content/semantics/epub-type.php">http://www.idpf.org/accessibility/guidelines/content/semantics/epub-type.php</a></li>
+			<li><a href="http://www.idpf.org/epub/301/spec/epub-contentdocs.html#sec-xhtml-semantic-inflection">http://www.idpf.org/epub/301/spec/epub-contentdocs.html#sec-xhtml-semantic-inflection</a></li>
+			<li><a href="http://www.idpf.org/epub/vocab/structure/">http://www.idpf.org/epub/vocab/structure/</a></li>
+		</ul>
+		<h4>Etiqueta &lt;nav&gt;</h4>
+		<p>Es una etiqueta creada en el estándar HTML5 y sirve para mostrar una lista de enlaces de navegación. Dado que ya estudiaremos el estándar de los libros digitales para crear tablas de contenidos, nos basta con saber que esta etiqueta de apertura y cierre existe y que es la que se usa en dicho estándar.</p>
+		<p>Este es un ejemplo de caso de uso de la etiqueta nav:</p>
+		<pre class="prettyprint"><code>
+	&lt;nav&gt;
+		&lt;ol&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Elemento 1&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Elemento 2&lt;/a&gt;&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Elemento 3&lt;/a&gt;&lt;/li&gt;
+		&lt;/ol&gt;
+	&lt;/nav&gt;
+		</code></pre>
+		<p>Aunque en una página web lo habitual es que los menús de navegación vayan en listas no ordenadas, en los libros digitales el orden de los capítulos sí importa, por lo que los índices suelen elaborarse con listas ordenadas.</p>
+		<div class="resalto">
+			<p>La etiqueta <code>&lt;ul&gt;</code> viene del inglés <i class="extranjero" lang="en">unordered list</i>.</p>
+			<p>La etiqueta <code>&lt;ol&gt;</code> viene del inglés <i class="extranjero" lang="en">ordered list</i>.</p>
+			<p>Tanto las listas ordenadas como las no ordenadas se componen de <i class="extranjero" lang="en">list items</i> o items de lista, es decir, etiquetas <code>li</code> de apertura y cierre como en <code>&lt;li&gt;un item en la lista&lt;/li&gt;</code>.</p>
+			<p>Las listas de definiciones o <code>dl</code>, como ya veremos, se componen de pares: un término <code>dt</code> es definido por su descripción o <code>dd</code>.</p>
+		</div>
+		<p>Un ejemplo de tabla de contenidos con listas ordenadas anidadas podría ser este:</p>
+		<pre class="prettyprint"><code>
+&lt;nav&gt;
+	&lt;ol&gt;
+		&lt;li&gt;Generalidades&lt;/li&gt;
+		&lt;li&gt;Estructura&lt;/li&gt;
+		&lt;li&gt;Historia
+			&lt;ol&gt;
+				&lt;li&gt;Formato EPUB3&lt;/li&gt;
+			&lt;/ol&gt;
+		&lt;/li&gt;
+		&lt;li&gt;Uso&lt;/li&gt;
+		&lt;li&gt;Críticas&lt;/li&gt;
+		&lt;li&gt;Lectores
+			&lt;ol&gt;
+				&lt;li&gt;eReaders&lt;/li&gt;
+				&lt;li&gt;Dispositivos multipropósito&lt;/li&gt;
+				&lt;li&gt;Teléfonos inteligentes&lt;/li&gt;
+				&lt;li&gt;PC
+					&lt;ol&gt;
+						&lt;li&gt;OS X (Mac)&lt;/li&gt;
+					&lt;/ol&gt;
+				&lt;/li&gt;
+				&lt;li&gt;Herramientas de creación&lt;/li&gt;
+			&lt;/ol&gt;
+		&lt;/li&gt;
+		&lt;li&gt;Referencias&lt;/li&gt;
+	&lt;/ol&gt;
+&lt;/nav&gt;
+		</pre></code>
+		<h4>Etiqueta &lt;article&gt;</h4>
+		<p>La etiqueta <code>article</code> define contenido autónomo que podría existir independientemente del resto del contenido. Podría ser un mensaje en un foro, un artículo de una revista o un periódico, una entrada de blog, un comentario de un usuario, un widget interactivo o gadget, o cualquier otro elemento <strong>independiente del contenido</strong>. En el caso de los libros digitales, la encontraremos sobre todo para marcar artículos de revistas y periódicos.</p>
+		<p>La clave para saber si debemos etiquetar un texto con <code>article</code> es si este contenido es sindicable, ya sea mediante un feed RSS o compartiéndolo directamente en redes sociales. Si es una pieza de texto independiente que no necesita de contexto para ser entendida, si puede reenviarse y leerse independientemente, estamos ante un <code>article</code>.</p>
+		<p>Existen ya plataformas de venta de revistas y periódicos en formato EPUB; es en este contexto en el que sacaremos el máximo provecho de la etiqueta <code>article</code>. Este es un ejemplo de uso de <code>article</code>:</p>
+		<pre class="prettyprint"><code>
+&lt;article lang="es"&gt;
+	&lt;h1 epub:type="title"&gt;Vuelva usted mañana&lt;/h1&gt;
+	&lt;p epub:type="subtitle" class="subtitulo"&gt;El Pobrecito Hablador, nº 11, enero de 1833&lt;/p&gt;
+	&lt;p&gt;Gran persona debió de ser el primero que llamó pecado mortal a la pereza; nosotros, que ya en uno de nuestros artículos anteriores estuvimos más serios de lo que nunca nos habíamos propuesto, no entraremos ahora en largas y profundas investigaciones acerca de la historia de este pecado, por más que conozcamos que hay pecados que pican en historia, y que la historia de los pecados sería un tanto cuanto divertida. Convengamos solamente en que esta institución ha cerrado y cerrará las puertas del cielo a más de un cristiano.&lt;/p&gt;
+	&lt;p&gt;Estas reflexiones hacía yo casualmente no hace muchos días, cuando se presentó en mi casa un extranjero de estos que en buena o en mala parte han de tener siempre de nuestro país una idea exagerada e hiperbólica, de estos que, o creen que los hombres aquí son todavía los espléndidos, francos, generosos y caballerescos seres de hace dos siglos, o que son aún las tribus nómadas del otro lado del Atlante: en el primer caso vienen imaginando que nuestro carácter se conserva tan intacto como nuestra ruina; en el segundo vienen temblando por esos caminos, y preguntan si son ladrones que los han de despojar los individuos de algún cuerpo de guardia establecido precisamente para defenderlos de los azares de un camino, comunes a todos los países.&lt;/p&gt;
+	&lt;p&gt;Verdad es, que nuestro país no es de aquellos que se conocen a la primera ni segunda vista, y si no temiéramos que nos llamasen atrevidos, lo compararíamos de buena gana a esos juegos de manos sorprendentes e inescrutables para el que ignora su artificio, que estribando en una grandísima bagatela, suelen después de sabidos dejar asombrado de su poca perspicacia al mismo que se devanó los sesos por buscarles causas extrañas. Muchas veces la falta de una causa determinante en las cosas nos hace creer que debe de haberlas profundas para mantenerlas al abrigo de nuestra penetración. Tal es el orgullo del hombre, que más quiere declarar en alta voz que las cosas son incomprensibles cuando no las comprende él, que confesar que el ignorarlas puede depender de su torpeza.&lt;/p&gt;
+	&lt;p&gt;Esto, no obstante, como quiera que entre nosotros mismos se hallen muchos en esta ignorancia de los verdaderos resortes que nos mueven, no tendremos derecho para extrañar que los extranjeros no los puedan tan fácilmente penetrar.&lt;/p&gt;
+	&lt;p&gt;Un extranjero de éstos fue el que se presentó en mi casa, provisto de competentes cartas de recomendación para mi persona. Asuntos intrincados de familia, reclamaciones futuras, y aun proyectos vastos concebidos en París, de invertir aquí sus cuantiosos caudales en tal o cual especulación industrial o mercantil, eran los motivos que a nuestra patria le conducían.&lt;/p&gt;
+	&lt;p&gt;Acostumbrado a la actividad en que viven nuestros vecinos, me aseguró formalmente que pensaba permanecer aquí muy poco tiempo, sobre todo, si no encontraba pronto objeto seguro en que invertir su capital. Pareciome el extranjero digno de alguna consideración, trabé presto amistad con él y lleno de lástima, traté de persuadirle a que se volviese a su casa cuanto antes, siempre que seriamente trajese otro fin que no fuese el de pasearse. Admirole la proposición, y fue preciso explicarme más claro.&lt;/p&gt;
+	&lt;p&gt;…&lt;/p&gt;
+	&lt;p&gt;Al llegar aquí monsieur Sans-délai, traté de reprimir una carcajada que me andaba retozando ya hacía rato en el cuerpo, y si mi educación logró sofocar mi inoportuna jovialidad, no fue bastante a impedir que se asomase a mis labios una suave sonrisa de asombro y de lástima que sus planes ejecutivos me sacaban al rostro mal de mi grado.&lt;/p&gt;
+	&lt;p&gt;Era cosa de ver la cara de mi amigo al oír lo del memorialito: representábasele en la imaginación el informe, y el empeño, y los seis meses, y… contentose con decir: &lt;q&gt;soy extranjero&lt;/q&gt;. ¡Buena recomendación entre los amables compatriotas míos! Aturdíase mi amigo cada vez más, y cada vez nos comprendía menos. Días y días tardamos en ver las pocas rarezas que tenemos guardadas. Finalmente, después de medio año largo, si es que puede haber un medio año más largo que otro, se restituyó mi recomendado a su patria maldiciendo de esta tierra, y dándome la razón que yo ya antes me tenía, y llevando al extranjero noticias excelentes de nuestras costumbres, diciendo, sobre todo, que en seis meses no había podido hacer otra cosa sino volver siempre mañana, y que a la vuelta de tanto mañana, enteramente futuro, lo mejor, o más bien lo único que había podido hacer bueno, había sido marcharse.&lt;/p&gt;
+	&lt;p&gt;¿Tendrá razón, perezoso lector (si es que has llegado ya a esto que estoy escribiendo), tendrá razón el buen M. Sans-délai en hablar mal de nosotros y de nuestra pereza? ¿Será cosa de que vuelva el día de mañana a visitar nuestros hogares? Dejemos esta cuestión para mañana, porque ya estarás cansado de leer hoy: si mañana u otro día no tienes, como sueles, pereza de volver a la librería, pereza de sacar tu bolsillo y pereza de abrir los ojos para hojear las hojas que tengo que darte todavía, te contaré cómo a mí mismo que todo esto veo, y conozco y callo mucho más, me ha sucedido muchas veces, llevado de esta influencia, hija del clima y de otras causas, perder de pereza más de una conquista amorosa, abandonar más de una pretensión empezada, las esperanzas de más de un empleo, que me hubiera sido acaso, con más actividad, poco menos que asequible; renunciar, en fin, por pereza de hacer una visita justa o necesaria, a relaciones sociales que hubieran podido valerme de mucho en el transcurso de mi vida; te confesaré que no hay negocio que no pueda hacer hoy que no deje para mañana; te referiré que me levanto a las once y duermo siesta, que paso haciendo quinto pie de la mesa de un café, hablando o roncando como buen español, las siete y las ocho horas seguidas; te añadiré que cuando cierran el café me arrastro lentamente a mi tertulia diaria (porque de pereza no tengo más que una), y un cigarrito tras otro me alcanzan clavado en un sitial, y bostezando sin cesar, las doce o la una de la madrugada; que muchas noches no ceno de pereza, y de pereza no me acuesto; en fin, lector de mi alma, te declararé que de tantas veces como estuve en esta vida desesperado, ninguna me ahorqué, y siempre fue de pereza. Y concluyo por hoy confesándote que ha más de tres meses que tengo, como la primera entre mis apuntaciones, el título de este artículo, que llamé &lt;cite&gt;Vuelva usted mañana&lt;/cite&gt;; que todas las noches y muchas tardes he querido, durante todo este tiempo, escribir algo en él, y todas las noches apagaba mi luz, diciéndome a mí mismo con la más pueril credulidad en mis propias resoluciones: &lt;q&gt;¡Eh! ¡mañana le escribiré!&lt;/q&gt; Da gracias a que llegó por fin este mañana, que no es del todo malo; pero ¡ay de aquel mañana que no ha de llegar jamás!&lt;/p&gt;
+	&lt;p&gt;&lt;span epub:type="credit"&gt;Autor: Mariano José de Larra&lt;/span&gt;&lt;/p&gt;
+&lt;/article&gt;
+		</pre></code>
+		<p>Se trata de un extracto (me habría encantado ponerlo entero) del famosísimo <strong>artículo</strong> periodístico «<cite>Vuelva usted mañana</cite>» de Mariano José de Larra, que tan bien retrata la España del siglo XXI. Fíjate en que, al hablar de este texto, lo natural es definirlo como artículo, también en español. Por ello, es pertinente marcarlo con una etiqueta <code>article</code>.</p>
+		<h4>Etiqueta &lt;main&gt;</h4>
+		<p>Ya hemos hablado de las etiquetas <code>section</code> y <code>article</code>. La primera sirve para agrupar contenido temáticamente y la segunda para aislar una pieza de texto dotada de sentido propio. Cuando usamos estas etiquetas nos sale natural que cada pieza tenga un título con una etiqueta tipo <code>h1</code>—<code>h6</code>. Nos imaginamos el uso de <code>section</code> y de <code>article</code> en el contexto de la parte principal del libro y no en esas cajitas que suelen estar en el margen de las revistas o libros de texto.</p>
+		<p>La etiqueta <code>main</code> representa el contenido principal del cuerpo de un documento. El área de contenido principal consta de contenido que se relaciona directamente o que se explaya acerca del tema central de un documento.</p>
+		<p>Si dudas sobre cuál es la mejor forma de etiquetar un trozo de texto en un documento html, pregúntate si se engloba dentro de lo que la etiqueta <code>title</code> de tu documento expresa. Si es así, debe estar dentro de la etiqueta <code>main</code>, anidado o no en una etiqueta <code>section</code> o <code>article</code>. Si trata sobre otro tema, debe estar fuera de <code>main</code> (por ejemplo en un <code>aside</code>).</p>
+		<div class="resalto">
+			<p>Ten en cuenta que la etiqueta <code>main</code> representa el contenido del cuerpo principal de un documento. La etiqueta <code>main</code> no es contenido seccional y no tiene efecto en el índice de un documento. Además, solo puede utilizarse una vez en el documento y no puede descender de etiquetas <code>article</code>, <code>aside</code>, <code>footer</code>, <code>header</code> o <code>nav</code>.</p>
+		</div>
+		<p>Para que comprendas mejor cómo se usa la etiqueta <code>main</code>, aquí tienes el ejemplo de una página web dedicada a la ceremonia de graduación del verano de 2022 en la Academia Lawson. Fíjate en que en este ejemplo la etiqueta <code>main</code> contiene una sección de navegación <code>nav</code> que consta de enlaces a subsecciones del contenido principal.</p>
+		<pre class="prettyprint"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+	&lt;head&gt;
+		&lt;title&gt;Graduation Ceremony Summer 2022&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;header&gt;The Lawson Academy:
+			&lt;nav&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href="courses.html"&gt;Courses&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="fees.html"&gt;Fees&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a&gt;Graduation&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/nav&gt; 
+		&lt;/header&gt;
+		&lt;main&gt;
+			&lt;h1&gt;Graduation&lt;/h1&gt;
+			&lt;nav&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href="#ceremony"&gt;Ceremony&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="#graduates"&gt;Graduates&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="#awards"&gt;Awards&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/nav&gt;
+			&lt;h2 id="ceremony"&gt;Ceremony&lt;/H2&gt;
+			&lt;p&gt;Opening Procession&lt;/p&gt;
+			&lt;p&gt;Speech by Valedictorian&lt;/p&gt;
+			&lt;p&gt;Speech by Class President&lt;/p&gt;
+			&lt;p&gt;Presentation of Diplomas&lt;/p&gt;
+			&lt;p&gt;Closing Speech by Headmaster&lt;/p&gt;
+			&lt;h2 id="graduates"&gt;Graduates&lt;/h2&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Eileen Williams&lt;/li&gt;
+				&lt;li&gt;Andy Maseyk&lt;/li&gt;
+				&lt;li&gt;Blanca Sainz Garcia&lt;/li&gt;
+				&lt;li&gt;Clara Faulkner&lt;/li&gt;
+				&lt;li&gt;Gez Lemon&lt;/li&gt;
+				&lt;li&gt;Eloisa Faulkner&lt;/li&gt;
+			&lt;/ul&gt;
+			&lt;h2 id="awards"&gt;Awards&lt;/h2&gt;
+			&lt;ul&gt;
+				&lt;li&gt;Clara Faulkner&lt;/li&gt;
+				&lt;li&gt;Eloisa Faulkner&lt;/li&gt;
+				&lt;li&gt;Blanca Sainz Garcia&lt;/li&gt;
+			&lt;/ul&gt;
+
+		&lt;/main&gt;
+		&lt;footer&gt; Copyright 2012 B.lawson&lt;/footer&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+		</code></pre>
+		<div class="resalto">
+			<p><strong>Nota</strong>: en el <cite>EPUB3 Structural Semantics Vocabulary</cite> del 27 de noviembre de 2014 (<a href="http://www.idpf.org/epub/vocab/structure/#">http://www.idpf.org/epub/vocab/structure/#</a>) aparece el valor <code>bodymatter</code> como recomendado para aplicarse al atributo <code>epub:type</code> solamente a etiquetas <code>section</code> y <code>body</code>. Este valor tiene en documentos de tipo EPUB un rol muy parecido al de la etiqueta <code>main</code> en HTML, ya que el IDPF lo define directamente como <q lang="en">the main content of a publication</q>.</p>
+			<p>La etiqueta <code>main</code> fue formalmente añadida al estándar HTML5 en junio de 2013. <a href="http://www.idpf.org/epub/301/spec/epub-contentdocs.html#sec-overview-relations-html" title="IDPF acerca de HTML5">El IDPF</a> indica, en la sección <cite lang="en">Relationship to HTML5</cite>, que se basa en el estándar HTML5 del W3C y hereda todas las definiciones de semántica, estructura y requerimientos de la especificicación HTML5 a no ser que se especifique otra cosa.</p>
+			<blockquote>The XHTML document type defined by this specification is based on W3C [HTML5], and inherits all definitions of semantics, structure and processing behaviors from the HTML5 specification unless otherwise specified.</blockquote>
+			<p>No he encontrado en toda la documentación del IDPF, y menos en su sección <cite>EPUB3 Structural Semantics Vocabulary</cite>, alusión alguna a la etiqueta <code>main</code>. El IDPF, por tanto, no desautoriza el uso de esta etiqueta proviniente del estándar HTML5 del W3C, pero tampoco establece un contexto adecuado para su uso.</p>
+			<p>Mi recomendación es que uses <code>main</code> solamente para experimentar y en entornos en los que puedas rectificar rápidamente. Dado que las etiquetas <code>section</code> son anidables, puedes anidar todo tu contenido principal (etiquetas <code>section</code> incluidas) en una etiqueta <code>&lt;section epub:type="bodymatter"&gt;</code> a la que el valor <code>bodymatter</code> le otorgaría el carácter de principal y meter toda la marginalia en una etiqueta <code>aside</code>.</p>
+		</div>
+		<h4>Etiqueta &lt;aside&gt;</h4>
+		<p>Imagina que estás haciendo un libro de texto en el que hablas de un tema determinado, por ejemplo, la Revolución Francesa. Hablas a los estudiantes acerca de la familia real francesa y su despotismo, la pobreza del pueblo, los elevados impuestos y la incipiente Revolución Industrial en ese país. Pero te gustaría que en uno de los márgenes, de forma ajena y sin relación directa con el tema principal, se expusiera brevemente qué ocurría justo en esa época en otros países europeos. Quieres incluir algún gráfico con un eje temporal y unas cuantas líneas sobre lo que pasaba en España, Inglaterra o Rusia en esos años. Eso sería un <code>aside</code>.</p>
+		<pre class="prettyprint"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+	&lt;head&gt;
+		&lt;title&gt;La Revolución Francesa&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;main&gt;
+			&lt;section&gt;
+				&lt;h1&gt;La Revolución Francesa&lt;/h1&gt;
+				&lt;p&gt;bla bla bla&lt;/p&gt;
+				&lt;section&gt;
+					&lt;h2&gt;Factores socioeconómicos&lt;/h2&gt;
+					&lt;p&gt;bla bla bla&lt;/p&gt;
+					&lt;article&gt;
+						&lt;h3&gt;El pan se encarece&lt;/h3&gt;
+						&lt;p&gt;bla bla bla&lt;/p&gt;
+					&lt;/article&gt;
+				&lt;/section&gt;
+				&lt;section&gt;
+					&lt;h2&gt;Factores políticos&lt;/h2&gt;
+					&lt;p&gt;bla bla bla&lt;/p&gt;
+				&lt;/section&gt;
+			&lt;/section&gt;
+		&lt;/main&gt;
+		&lt;aside&gt;
+			&lt;article&gt;
+				&lt;h1&gt;Qué pasa en Inglaterra&lt;/h1&gt;
+				&lt;p&gt;bla bla bla&lt;/p&gt;
+			&lt;/article&gt;
+			&lt;article&gt;
+				&lt;h1&gt;Qué pasa en España&lt;/h1&gt;
+				&lt;p&gt;bla bla bla&lt;/p&gt;
+			&lt;/article&gt;
+			&lt;article&gt;
+				&lt;h1&gt;Qué pasa en Rusia&lt;/h1&gt;
+				&lt;p&gt;bla bla bla&lt;/p&gt;
+			&lt;/article&gt;
+		&lt;/aside&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+		</code></pre>
+		<p>El IDPF dispone de vocabulario propio para utilizarse explícitamente en <code>aside</code> bajo el atributo <code>epub:type</code>. Por ejemplo, <code>errata</code>, <code>help</code> o <code>pullquote</code>. Pero, al considerarse que <code>aside</code> forma parte de las etiquetas de tipo <i lang="en">flow content</i> y <i lang="en">sectioning content</i>, existen muchos más valores aplicables al atributo <code>epub:type</code> de esta etiqueta: <code>learning-objective</code>, <code>case-study</code>, <code>answer</code> y muchas más. Muchos de estos valores, recientemente incorporados por el IDPF, están actualmente en borrador, pero su potencia para el libro académico queda fuera de toda duda, por lo que esperamos que cuajen.</p>
+		<h4>Etiqueta &lt;footer&gt;</h4>
+		<p>Al igual que ocurre con la etiqueta <code>main</code>, el IDPF no establece un contexto de uso adecuado para esta etiqueta, aunque tampoco la desautoriza. Se queda, por tanto, en una especie de limbo.</p>
+		<p>Si nos vamos al <cite>EPUB3 Structural Semantics Vocabulary</cite>, vemos que hay varios valores previstos para notas al pie, que visualmente se sitúan en lo que ordinariamente denominamos <em>pie</em>, en español, o <em lang="en">footer</em>, en inglés. No obstante, el IDPF sugiere que estos valores nuevos (<code>footnote</code>, <code>rearnote</code>, etc) se sitúen en etiquetas <code>aside</code>.</p>
+
+
+
+		<h4>Encabezados</h4>
+		<p>Según el W3C, dentro de los encabezados <i>(<span lang="en">heading content</span>)</i> solamente entran las etiquetas <code>h1</code>—<code>h6</code>. Es decir, se entiende que las etiquetas de encabezado son los títulos de primer nivel, de segundo nivel, de tercer nivel, etc, y así hasta el sexto nivel, que es el nivel inferior con el que HTML5 permite encabezar una sección.</p>
+		<p>Pero hay otras etiquetas parecidas, como <code>header</code>, que el W3C no entiende como encabezados porque no introducen secciones nuevas. Son etiquetas que sirven para agrupar titulares a modo de cartel. Además, el IDPF no establece un gran contexto de uso para <code>header</code>. Lo menciona de pasada en un valor del atributo <code>epub:type</code> que sirve para crear índices y eso es todo. No lo menciona, desde luego, para valores como <code>fulltitle</code>, <code>title</code> o <code>subtitle</code>, donde la intuición nos dice que deberían aplicarse. Por lo tanto, es mejor marcar los títulos como en el artículo de Larra que hemos mostrado antes:</p>
+		<pre class="prettyprint"><code>
+&lt;article lang="es"&gt;
+	&lt;h1 epub:type="title"&gt;Vuelva usted mañana&lt;/h1&gt;
+	&lt;p epub:type="subtitle" class="subtitulo"&gt;El Pobrecito Hablador, nº 11, enero de 1833&lt;/p&gt;
+	&lt;p&gt;Gran persona debió de ser el primero que llamó pecado mortal a la pereza; nosotros, que ya en uno de nuestros artículos anteriores estuvimos más serios de lo que nunca nos habíamos propuesto, no entraremos ahora en largas y profundas investigaciones acerca de la historia de este pecado, por más que conozcamos que hay pecados que pican en historia, y que la historia de los pecados sería un tanto cuanto divertida. Convengamos solamente en que esta institución ha cerrado y cerrará las puertas del cielo a más de un cristiano.&lt;/p&gt;
+&lt;/article&gt;
+		</code></pre>
+		<p>La etiqueta <code>hgroup</code>, que antes servía para agrupar un titular con su línea de apoyo de manera parecida a como hoy hace <code>header</code>, está en trance de eliminación del estándar HTML5.</p>
+		<h4>Etiqueta &lt;address&gt;</h4>
+		<p>El uso de la etiqueta <code>address</code>, que, como su propio nombre indica, sirve para anotar direcciones (ya sea físicas o virtuales), no está descrito por el IDPF. Esta vetusta y desconocida etiqueta, creada en 1995 para HTML3, suele usarse en la web para facilitar datos de contacto de personas o empresas.</p>
+		<p>Aquí tienes un ejemplo de la etiqueta <code>address</code> en uso junto con el <a href="http://html5doctor.com/microformats/#hcard">microformato hCard</a>:</p>
+		<pre class="prettyprint"><code>
+&lt;div class="vcard"&gt;
+&lt;p class="fn"&gt;&lt;a class="url" href="#"&gt;Rebeca Ruiz Sánchez&lt;/a&gt;&lt;p&gt;
+&lt;p class="adr"&gt;
+	&lt;span class="street-address"&gt;Mi caaasa&lt;/span&gt;&lt;br&gt;
+	&lt;span class="region">Las Matas&lt;/span&gt;&lt;br /&gt;
+	&lt;span class="postal-code">28290&lt;/span&gt;&lt;br /&gt;
+	&lt;span class="country-name">España&lt;/span&gt;
+&lt;/p&gt;
+&lt;p class="tel">+34666123456&lt;/p&gt;
+&lt;/div&gt;
+		</code></pre>
+		<h3>Agrupaciones de contenidos</h3>
+		<p>Cuando explicábamos las etiquetas de tipo sección, en los ejemplos a veces podíamos ver otras etiquetas cuyo significado no siempre explicábamos, como <code>p</code>, <code>ul</code> o <code>blockquote</code>. Estas etiquetas sirven para agrupar contenido con sentido propio. Son párrafos, listas de elementos o citas de autores. En resumen, son unidades de texto que, agrupadas, denotan una idea, que puede estar insertada (o no) en un discurso general más amplio.</p>
+		<p>Volvamos al artículo de Larra y tomemos el primer párrafo que aparece:</p>
+		<p class="resalto">Gran persona debió de ser el primero que llamó pecado mortal a la pereza; nosotros, que ya en uno de nuestros artículos anteriores estuvimos más serios de lo que nunca nos habíamos propuesto, no entraremos ahora en largas y profundas investigaciones acerca de la historia de este pecado, por más que conozcamos que hay pecados que pican en historia, y que la historia de los pecados sería un tanto cuanto divertida. Convengamos solamente en que esta institución ha cerrado y cerrará las puertas del cielo a más de un cristiano.
+		</p>
+		<pre class="prettyprint"><code>
+&lt;p&gt;Gran persona debió de ser el primero que llamó pecado mortal a la pereza; nosotros, que ya en uno de nuestros artículos anteriores estuvimos más serios de lo que nunca nos habíamos propuesto, no entraremos ahora en largas y profundas investigaciones acerca de la historia de este pecado, por más que conozcamos que hay pecados que pican en historia, y que la historia de los pecados sería un tanto cuanto divertida. Convengamos solamente en que esta institución ha cerrado y cerrará las puertas del cielo a más de un cristiano.&lt;/p&gt;
+		</code></pre>
+		<p>Según el W3C, las etiquetas de agrupación de contenido son las siguientes:</p>
+		<ul>
+			<li><code>p</code> o párrafo</li>
+			<li><code>hr</code> o línea horizontal</li>
+			<li><code>pre</code> o texto preformateado</li>
+			<li><code>blockquote</code> o bloque de cita</li>
+			<li><code>ol</code> o lista ordenada</li>
+			<li><code>ul</code> o lista no ordenada</li>
+			<li><code>li</code> o elemento de lista</li>
+			<li><code>dl</code> o lista de definiciones</li>
+			<li><code>dt</code> o término a definir</li>
+			<li><code>dd</code> o cuerpo (descripción) de la definición</li>
+			<li><code>figure</code> o figura</li>
+			<li><code>figcaption</code> o leyenda de la figura</li>
+			<li><code>div</code> o div (no tiene significado, es un contenedor sin más)</li>
+			<li><code>main</code> (este lo metimos antes en etiquetas de tipo sección, según criterio de la Fundación Mozilla)</li>
+		</ul>
+		<p>Ya hemos explicado qué es un párrafo y cómo se marca (no olvidéis que es una etiqueta de apertura y cierre, por lo que necesita tener la versión de apertura <code>&lt;p&gt;</code> al inicio del párrafo y la de cierre <code>&lt;/p&gt;</code> al final del párrafo). Por lo tanto, pasemos a la siguiente etiqueta, que es (o parece) muy sencilla: <code>hr</code>.</p>
+		<h4>Etiqueta &lt;hr /&gt;</h4>
+		<p>La etiqueta <code>hr</code>, que no contiene nada dentro, no es de apertura y cierre, se autocierra ella sola:</p>
+		<div class="resalto">
+			<p>Aquí estoy hablando de una cosa.</p>
+			<hr />
+			<p>Y después del <code>&lt;hr /&gt;,</code> os hablo de otra distinta.</p>
+		</div>
+		<pre class="prettyprint"><code>
+&lt;p&gt;Aquí estoy hablando de una cosa.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Y después del &lt;hr /&gt;, os hablo de otra distinta.&lt;/p&gt;
+		</code></pre>
+		<p>Esta etiqueta representa una ruptura temática a nivel de párrafo. Por ejemplo, puede marcar la ruptura entre una escena y otra en una novela.</p>
+		<p>Aunque <code>hr</code> significa literalmente <i lang="en">horizontal rule</i> o barra horizontal, al haber sido dotada de sentido en HTML5 (antes era una etiqueta presentacional y ahora tiene carga semántica), puedes estilarla para que se adecúe a la presentación de tu libro. En esta imagen tienes un ejemplo:</p>
+		<p><img src="img/hr-separator.png" /></p>
+		<p>Para conseguir esto, a la etiqueta <code>&lt;hr /&gt;</code> se le han dado los estilos siguientes:</p>
+		<pre class="prettyprint"><code>
+hr {
+	height: 24px;
+	background: url('flourish.png') no-repeat 50% 50%;
+	margin: 3em 0;
+	border: 0;
+}
+		</code></pre>
+		<p>Pero ya llegaremos a las hojas de estilo en cascada o CSS. De momento te basta con saber que, gracias a una estructuración rigurosa del texto y, por ende, la separación de contenido y presentación, es mucho más fácil llevar a cabo maquetaciones complejas.</p>
+		<h4>Etiqueta &lt;pre&gt;</h4>
+		<p>Esta etiqueta representa texto preformateado. ¿Y qué significa «texto preformateado»?, te preguntarás.</p>
+		<p>Anteriormente en este curso hemos hablado de lo importante que es el <strong>indentado</strong> para entender cómo está formado un documento HTML, comprender su estructura e identificar rápidamente los errores.</p>
+		<p>Podemos indentar el HTML porque los navegadores simplifican los espacios vacíos entre las unidades de texto: en cuanto hay más de un espacio, cuentan como si solo hubiera uno, e igualmente hacen con los tabuladores. Toda sucesión de tabuladores será entendida como un solo espacio.</p>
+		<p>Pero, ¿qué ocurre si precisamente <strong>queremos</strong> que esos espacios se muestren tal y como los hemos dejado? Esto es más común de lo que parece. Podemos desear que se muestren los espacios por estética (en algunas piezas poéticas los espacios son importantísimos) o por un motivo didáctico. De hecho, en este curso todos los ejemplos de código van con el etiquetado siguiente:</p>
+		<pre class="prettyprint"><code>
+&lt;pre&gt;&lt;code&gt;
+	Aquí en medio va el código
+		Indentado con un tabulador
+	Le quito el indentado
+&lt;/code&gt;&lt;/pre&gt;
+		</code></pre>
+		<p>Donde <code>pre</code>, que no tiene valor semántico, indica al navegador que a partir de ahora debe respetar los espacios y tabuladores tal y como se hayan introducido. Y la etiqueta <code>code</code>, que sí tiene valor semántico, indica que nos hallamos ante una pieza de código.</p>
+		<p class="resalto">No olvides que, como en el caso de <code>pre</code> y <code>code</code>, debes abrir y cerrar las etiquetas como si se tratara de muñecas rusas. Cuando una etiqueta anidada en otra se abre, debe cerrarse también dentro de la etiqueta madre, sin salirse de ella. Esto debes cumplirlo <strong>siempre</strong>.</p>
+		<h4>Etiqueta &lt;blockquote&gt;</h4>
+		<p>El IDPF no establece ningún valor para <code>epub:type</code> similar a la etiqueta <code>blockquote</code>, que tiene tradición de uso en etapas tempranas tanto de HTML como del estándar EPUB. Un bloque de cita o <code>blockquote</code> es simplemente una cita de un autor externo con la entidad suficiente como para necesitar su propio bloque de texto, ya sea por su relevancia, extensión o temática.</p>
+		<p>El uso de <code>blockquote</code> es la respuesta semántica a la convención tipográfica que durante siglos se ha tenido en el papel de representar los bloques de citas con un sangrado de párrafo a la derecha, a veces con un tipo de letra diferente. De hecho, si no se aplican estilos propios, la mayoría de navegadores sangrará por defecto el texto a la derecha cuando se encuentre con una etiqueta <code>blockquote</code>.</p>
+		<p><img src="img/blockquote.png" /></p>
+		<p>No obstante, con estilos puedes lograr cosas como esta:</p>
+		<figure>
+			<img src="img/matchbook-magazine-quote.jpg" />
+			<figcaption>Revista digital <cite lang="en">Matchbook</cite>, abril de 2011. <q lang="en">What, to you, is the ultimate luxury?</q></figcaption>
+		</figure>
+		<h4>Listas</h4>
+		<p>Existen tres tipos de listas en HTML: listas ordenadas, listas no ordenadas y listas de definición.</p>
+		<p>Las <strong>listas ordenadas</strong> se representan con la etiqueta de apertura y cierre <code>ol</code> y sirven para enumerar elementos con un orden intencionado.</p>
+		<p>Las <strong>listas no ordenadas</strong> se representan con la etiqueta de apertura y cierre <code>ul</code> y sirven para listar elementos cuyo orden de aparición en la lista no tiene importancia, es decir, la lista no cambiaría de significado si por algún motivo los elementos cambiaran su orden de aparición en ella.</p>
+		<p>Tanto las listas ordenadas <code>ol</code> como las listas no ordenadas <code>ul</code> se componen de elementos etiquetados con la marca de apertura y cierre <code>li</code>. A continuación os suministramos unos ejemplos:</p>
+		<h5>Listas ordenadas</h5>
+		<p><strong>Ejemplo: Capítulos del Quijote</strong></p>
+
+		<ol class="Romanos" start="1">
+			<li>Que trata de la condición y ejercicio del famoso hidalgo don Quijote de la Mancha</li>
+			<li>Que trata de la primera salida que de su tierra hizo el ingenioso don Quijote</li>
+			<li>Donde se cuenta la graciosa manera que tuvo don Quijote en armarse caballero</li>
+			<li>De lo que le sucedió a nuestro caballero cuando salió de la venta</li>
+			<li>Donde se prosigue la narración de la desgracia de nuestro caballero</li>
+			<li>Del donoso y grande escrutinio que el cura y el barbero hicieron en la librería de nuestro ingenioso hidalgo</li>
+			<li>De la segunda salida de nuestro buen caballero don Quijote de la Mancha</li>
+			<li>Del buen suceso que el valeroso don Quijote tuvo en la espantable y jamás imaginada aventura de los molinos de viento, con otros sucesos dignos de felice recordación</li>
+			<li>Donde se concluye y da fin a la estupenda batalla que el gallardo vizcaíno y el valiente manchego tuvieron</li>
+			<li>De lo que más le avino a don Quijote con el vizcaíno, y del peligro en que se vio con una turba de yangüeses</li>
+			<li>De lo que le sucedió a don Quijote con unos cabreros</li>
+			<li>De lo que contó un cabrero a los que estaban con don Quijote</li>
+			<li>Donde se da fin al cuento de la pastora Marcela, con otros sucesos</li>
+			<li>Donde se ponen los versos desesperados del difunto pastor, con otros no esperados sucesos</li>
+			<li>Donde se cuenta la desgraciada aventura que se topó don Quijote en topar con unos desalmados yangüeses</li>
+			<li>De lo que le sucedió al ingenioso hidalgo en la venta que él imaginaba ser castillo</li>
+			<li>Donde se prosiguen los innumerables trabajos que el bravo don Quijote y su buen escudero Sancho Panza pasaron en la venta que, por su mal, pensó que era castillo</li>
+			<li>Donde se cuentan las razones que pasó Sancho Panza con su señor Don Quijote, con otras aventuras dignas de ser contadas</li>
+			<li>De las discretas razones que Sancho pasaba con su amo, y de la aventura que le sucedió con un cuerpo muerto, con otros acontecimientos famosos</li>
+			<li>De la jamás vista ni oída aventura que con más poco peligro fue acabada de famoso caballero en el mundo, como la que acabó el valeroso don Quijote de la Mancha</li>
+			<li>Que trata de la alta aventura y rica ganancia del yelmo de Mambrino, con otras cosas sucedidas a nuestro invencible caballero</li>
+			<li>De la libertad que dio don Quijote a muchos desdichados que, mal de su grado, los llevaban donde no quisieran ir</li>
+			<li>De lo que le aconteció al famoso don Quijote en Sierra Morena, que fue una de las más raras aventuras que en esta verdadera historia se cuentan</li>
+			<li>Donde se prosigue la aventura de la Sierra Morena</li>
+			<li>Que trata de las estrañas cosas que en Sierra Morena sucedieron al valiente caballero de la Mancha, y de la imitación que hizo a la penitencia de Beltenebros</li>
+			<li>Donde se prosiguen las finezas que de enamorado hizo don Quijote en Sierra Morena</li>
+			<li>De cómo salieron con su intención el cura y el barbero, con otras cosas dignas de que se cuenten en esta grande historia</li>
+			<li>Que trata de la nueva y agradable aventura que al cura y barbero sucedió en la mesma sierra</li>
+			<li>Que trata de la discreción de la hermosa Dorotea, con otras cosas de mucho gusto y pasatiempo</li>
+			<li>Que trata del gracioso artificio y orden que se tuvo en sacar a nuestro enamorado caballero de la asperísima penitencia en que se había puesto</li>
+			<li>De los sabrosos razonamientos que pasaron entre don Quijote y Sancho Panza, su escudero, con otros sucesos</li>
+			<li>Que trata de lo que sucedió en la venta a toda la cuadrilla de don Quijote</li>
+			<li>Donde se cuenta la novela del Curioso impertinente</li>
+			<li>Donde se prosigue la novela del Curioso impertinente</li>
+			<li>Donde se da fin a la novela del Curioso impertinente</li>
+			<li>Que trata de la brava y descomunal batalla que don Quijote tuvo con unos cueros de vino tinto, con otros raros sucesos que en la venta le sucedieron</li>
+			<li>Que prosigue la historia de la famosa infanta Micomicona, con otras graciosas aventuras</li>
+			<li>Que trata del curioso discurso que hizo don Quijote de las armas y las letras</li>
+			<li>Donde el cautivo cuenta su vida y sucesos</li>
+			<li>Donde se prosigue la historia del cautivo</li>
+			<li>Donde todavía prosigue el cautivo su suceso</li>
+			<li>Que trata de lo que más sucedió en la venta y de otras muchas cosas dignas de saberse</li>
+			<li>Donde se cuenta la agradable historia del mozo de mulas, con otros estraños acaecimientos en la venta sucedidos</li>
+			<li>Donde se prosiguen los inauditos sucesos de la venta</li>
+			<li>Donde se acaba de averiguar la duda del yelmo de Mambrino y de la albarda, y otras aventuras sucedidas, con toda verdad</li>
+			<li>De la notable aventura de los cuadrilleros, y la gran ferocidad de nuestro buen caballero don Quijote</li>
+			<li>Del estraño modo con que fue encantado don Quijote de la Mancha, con otros famosos sucesos</li>
+			<li>Donde prosigue el canónigo la materia de los libros de caballerías, con otras cosas dignas de su ingenio</li>
+			<li>Donde se trata del discreto coloquio que Sancho Panza tuvo con su señor don Quijote</li>
+			<li>De las discretas altercaciones que don Quijote y el canónigo tuvieron, con otros sucesos</li>
+			<li>Que trata de lo que contó el cabrero a todos los que llevaban a don Quijote</li>
+			<li>De la pendencia que don Quijote tuvo con el cabrero, con la rara aventura de los deceplinantes, a quien dio felice fin a costa de su sudor</li>
+		</ol>
+		<pre class="prettyprint"><code>
+&lt;ol class="Romanos"&gt;
+	&lt;li&gt;Que trata de la condición y ejercicio del famoso hidalgo don Quijote de la Mancha&lt;/li&gt;
+	&lt;li&gt;Que trata de la primera salida que de su tierra hizo el ingenioso don Quijote&lt;/li&gt;
+	&lt;li&gt;Donde se cuenta la graciosa manera que tuvo don Quijote en armarse caballero&lt;/li&gt;
+	&lt;li&gt;De lo que le sucedió a nuestro caballero cuando salió de la venta&lt;/li&gt;
+	&lt;li&gt;Donde se prosigue la narración de la desgracia de nuestro caballero&lt;/li&gt;
+	&lt;li&gt;Del donoso y grande escrutinio que el cura y el barbero hicieron en la librería de nuestro ingenioso hidalgo&lt;/li&gt;
+	&lt;li&gt;De la segunda salida de nuestro buen caballero don Quijote de la Mancha&lt;/li&gt;
+	&lt;li&gt;Del buen suceso que el valeroso don Quijote tuvo en la espantable y jamás imaginada aventura de los molinos de viento, con otros sucesos dignos de felice recordación&lt;/li&gt;
+	&lt;li&gt;Donde se concluye y da fin a la estupenda batalla que el gallardo vizcaíno y el valiente manchego tuvieron&lt;/li&gt;
+	&lt;li&gt;De lo que más le avino a don Quijote con el vizcaíno, y del peligro en que se vio con una turba de yangüeses&lt;/li&gt;
+	&lt;li&gt;De lo que le sucedió a don Quijote con unos cabreros&lt;/li&gt;
+	&lt;li&gt;De lo que contó un cabrero a los que estaban con don Quijote&lt;/li&gt;
+	&lt;li&gt;Donde se da fin al cuento de la pastora Marcela, con otros sucesos&lt;/li&gt;
+	&lt;li&gt;Donde se ponen los versos desesperados del difunto pastor, con otros no esperados sucesos&lt;/li&gt;
+	&lt;li&gt;Donde se cuenta la desgraciada aventura que se topó don Quijote en topar con unos desalmados yangüeses&lt;/li&gt;
+	&lt;li&gt;De lo que le sucedió al ingenioso hidalgo en la venta que él imaginaba ser castillo&lt;/li&gt;
+	&lt;li&gt;Donde se prosiguen los innumerables trabajos que el bravo don Quijote y su buen escudero Sancho Panza pasaron en la venta que, por su mal, pensó que era castillo&lt;/li&gt;
+	&lt;li&gt;Donde se cuentan las razones que pasó Sancho Panza con su señor Don Quijote, con otras aventuras dignas de ser contadas&lt;/li&gt;
+	&lt;li&gt;De las discretas razones que Sancho pasaba con su amo, y de la aventura que le sucedió con un cuerpo muerto, con otros acontecimientos famosos&lt;/li&gt;
+	&lt;li&gt;De la jamás vista ni oída aventura que con más poco peligro fue acabada de famoso caballero en el mundo, como la que acabó el valeroso don Quijote de la Mancha&lt;/li&gt;
+	&lt;li&gt;Que trata de la alta aventura y rica ganancia del yelmo de Mambrino, con otras cosas sucedidas a nuestro invencible caballero&lt;/li&gt;
+	&lt;li&gt;De la libertad que dio don Quijote a muchos desdichados que, mal de su grado, los llevaban donde no quisieran ir&lt;/li&gt;
+	&lt;li&gt;De lo que le aconteció al famoso don Quijote en Sierra Morena, que fue una de las más raras aventuras que en esta verdadera historia se cuentan&lt;/li&gt;
+	&lt;li&gt;Donde se prosigue la aventura de la Sierra Morena&lt;/li&gt;
+	&lt;li&gt;Que trata de las estrañas cosas que en Sierra Morena sucedieron al valiente caballero de la Mancha, y de la imitación que hizo a la penitencia de Beltenebros&lt;/li&gt;
+	&lt;li&gt;Donde se prosiguen las finezas que de enamorado hizo don Quijote en Sierra Morena&lt;/li&gt;
+	&lt;li&gt;De cómo salieron con su intención el cura y el barbero, con otras cosas dignas de que se cuenten en esta grande historia&lt;/li&gt;
+	&lt;li&gt;Que trata de la nueva y agradable aventura que al cura y barbero sucedió en la mesma sierra&lt;/li&gt;
+	&lt;li&gt;Que trata de la discreción de la hermosa Dorotea, con otras cosas de mucho gusto y pasatiempo&lt;/li&gt;
+	&lt;li&gt;Que trata del gracioso artificio y orden que se tuvo en sacar a nuestro enamorado caballero de la asperísima penitencia en que se había puesto&lt;/li&gt;
+	&lt;li&gt;De los sabrosos razonamientos que pasaron entre don Quijote y Sancho Panza, su escudero, con otros sucesos&lt;/li&gt;
+	&lt;li&gt;Que trata de lo que sucedió en la venta a toda la cuadrilla de don Quijote&lt;/li&gt;
+	&lt;li&gt;Donde se cuenta la novela del Curioso impertinente&lt;/li&gt;
+	&lt;li&gt;Donde se prosigue la novela del Curioso impertinente&lt;/li&gt;
+	&lt;li&gt;Donde se da fin a la novela del Curioso impertinente&lt;/li&gt;
+	&lt;li&gt;Que trata de la brava y descomunal batalla que don Quijote tuvo con unos cueros de vino tinto, con otros raros sucesos que en la venta le sucedieron&lt;/li&gt;
+	&lt;li&gt;Que prosigue la historia de la famosa infanta Micomicona, con otras graciosas aventuras&lt;/li&gt;
+	&lt;li&gt;Que trata del curioso discurso que hizo don Quijote de las armas y las letras&lt;/li&gt;
+	&lt;li&gt;Donde el cautivo cuenta su vida y sucesos&lt;/li&gt;
+	&lt;li&gt;Donde se prosigue la historia del cautivo&lt;/li&gt;
+	&lt;li&gt;Donde todavía prosigue el cautivo su suceso&lt;/li&gt;
+	&lt;li&gt;Que trata de lo que más sucedió en la venta y de otras muchas cosas dignas de saberse&lt;/li&gt;
+	&lt;li&gt;Donde se cuenta la agradable historia del mozo de mulas, con otros estraños acaecimientos en la venta sucedidos&lt;/li&gt;
+	&lt;li&gt;Donde se prosiguen los inauditos sucesos de la venta&lt;/li&gt;
+	&lt;li&gt;Donde se acaba de averiguar la duda del yelmo de Mambrino y de la albarda, y otras aventuras sucedidas, con toda verdad&lt;/li&gt;
+	&lt;li&gt;De la notable aventura de los cuadrilleros, y la gran ferocidad de nuestro buen caballero don Quijote&lt;/li&gt;
+	&lt;li&gt;Del estraño modo con que fue encantado don Quijote de la Mancha, con otros famosos sucesos&lt;/li&gt;
+	&lt;li&gt;Donde prosigue el canónigo la materia de los libros de caballerías, con otras cosas dignas de su ingenio&lt;/li&gt;
+	&lt;li&gt;Donde se trata del discreto coloquio que Sancho Panza tuvo con su señor don Quijote&lt;/li&gt;
+	&lt;li&gt;De las discretas altercaciones que don Quijote y el canónigo tuvieron, con otros sucesos&lt;/li&gt;
+	&lt;li&gt;Que trata de lo que contó el cabrero a todos los que llevaban a don Quijote&lt;/li&gt;
+	&lt;li&gt;De la pendencia que don Quijote tuvo con el cabrero, con la rara aventura de los deceplinantes, a quien dio felice fin a costa de su sudor&lt;/li&gt;
+&lt;/ol&gt;
+		</code></pre>
+		<p>Imagina que quisiéramos citar solamente los últimos diez de los cincuenta y dos capítulos de <cite>El Quijote</cite>; esto también es posible hacerlo mediante el atributo <code>start</code> en la etiqueta <code>ol</code>. Podemos indicar que el punto de partida de la lista no sea el valor por defecto, que es 1. Podemos indicar que sea, por ejemplo, 42:</p>
+		<p><code>&lt;ol class="Romanos" start="42"&gt;</code></p>
+		<ol class="Romanos" start="42">
+			<li>Que trata de lo que más sucedió en la venta y de otras muchas cosas dignas de saberse</li>
+			<li>Donde se cuenta la agradable historia del mozo de mulas, con otros estraños acaecimientos en la venta sucedidos</li>
+			<li>Donde se prosiguen los inauditos sucesos de la venta</li>
+			<li>Donde se acaba de averiguar la duda del yelmo de Mambrino y de la albarda, y otras aventuras sucedidas, con toda verdad</li>
+			<li>De la notable aventura de los cuadrilleros, y la gran ferocidad de nuestro buen caballero don Quijote</li>
+			<li>Del estraño modo con que fue encantado don Quijote de la Mancha, con otros famosos sucesos</li>
+			<li>Donde prosigue el canónigo la materia de los libros de caballerías, con otras cosas dignas de su ingenio</li>
+			<li>Donde se trata del discreto coloquio que Sancho Panza tuvo con su señor don Quijote</li>
+			<li>De las discretas altercaciones que don Quijote y el canónigo tuvieron, con otros sucesos</li>
+			<li>Que trata de lo que contó el cabrero a todos los que llevaban a don Quijote</li>
+			<li>De la pendencia que don Quijote tuvo con el cabrero, con la rara aventura de los deceplinantes, a quien dio felice fin a costa de su sudor</li>
+		</ol>
+		<pre class="prettyprint"><code>
+&lt;ol class="Romanos" start="42"&gt;
+	&lt;li&gt;Que trata de lo que más sucedió en la venta y de otras muchas cosas dignas de saberse&lt;/li&gt;
+	&lt;li&gt;Donde se cuenta la agradable historia del mozo de mulas, con otros estraños acaecimientos en la venta sucedidos&lt;/li&gt;
+	&lt;li&gt;Donde se prosiguen los inauditos sucesos de la venta&lt;/li&gt;
+	&lt;li&gt;Donde se acaba de averiguar la duda del yelmo de Mambrino y de la albarda, y otras aventuras sucedidas, con toda verdad&lt;/li&gt;
+	&lt;li&gt;De la notable aventura de los cuadrilleros, y la gran ferocidad de nuestro buen caballero don Quijote&lt;/li&gt;
+	&lt;li&gt;Del estraño modo con que fue encantado don Quijote de la Mancha, con otros famosos sucesos&lt;/li&gt;
+	&lt;li&gt;Donde prosigue el canónigo la materia de los libros de caballerías, con otras cosas dignas de su ingenio&lt;/li&gt;
+	&lt;li&gt;Donde se trata del discreto coloquio que Sancho Panza tuvo con su señor don Quijote&lt;/li&gt;
+	&lt;li&gt;De las discretas altercaciones que don Quijote y el canónigo tuvieron, con otros sucesos&lt;/li&gt;
+	&lt;li&gt;Que trata de lo que contó el cabrero a todos los que llevaban a don Quijote&lt;/li&gt;
+	&lt;li&gt;De la pendencia que don Quijote tuvo con el cabrero, con la rara aventura de los deceplinantes, a quien dio felice fin a costa de su sudor&lt;/li&gt;
+&lt;/ol&gt;
+		</code></pre>
+		<p>En listas ordenadas también puedes usar el atributo <code>value</code> (solamente puedes asignar un número entero a este atributo, no otros valores) para alterar el orden de la lista. Fíjate en el siguiente ejemplo, en el que salen los cinco últimos capítulos del Quijote:</p>
+		<ol class="Romanos" start="47">
+			<li>Donde prosigue el canónigo la materia de los libros de caballerías, con otras cosas dignas de su ingenio</li>
+			<li>Donde se trata del discreto coloquio que Sancho Panza tuvo con su señor don Quijote</li>
+			<li value="250">De las discretas altercaciones que don Quijote y el canónigo tuvieron, con otros sucesos</li>
+			<li>Que trata de lo que contó el cabrero a todos los que llevaban a don Quijote</li>
+			<li>De la pendencia que don Quijote tuvo con el cabrero, con la rara aventura de los deceplinantes, a quien dio felice fin a costa de su sudor</li>
+		</ol>
+		<p>Y este es el marcado:</p>
+		<pre class="prettyprint"><code>
+&lt;ol class="Romanos" start="47"&gt;
+	&lt;li&gt;Donde prosigue el canónigo la materia de los libros de caballerías, con otras cosas dignas de su ingenio&lt;/li&gt;
+	&lt;li&gt;Donde se trata del discreto coloquio que Sancho Panza tuvo con su señor don Quijote&lt;/li&gt;
+	&lt;li value="250"&gt;De las discretas altercaciones que don Quijote y el canónigo tuvieron, con otros sucesos&lt;/li&gt;
+	&lt;li&gt;Que trata de lo que contó el cabrero a todos los que llevaban a don Quijote&lt;/li&gt;
+	&lt;li&gt;De la pendencia que don Quijote tuvo con el cabrero, con la rara aventura de los deceplinantes, a quien dio felice fin a costa de su sudor&lt;/li&gt;
+&lt;/ol&gt;
+		</code></pre>
+		<p>Para que se mostraran los números romanos hemos utilizado una propiedad CSS. Hay quien utiliza el atributo <code>type</code> con este fin, pero este atributo no solamente está obsoleto, sino que además es muy limitado porque tiene un abanico de posibilidades muy pequeño. Mediante propiedades CSS, si quieres, puedes poner desde el alfabeto griego hasta numeración tradicional armenia, pasando por los aburridos números naturales que tan acostumbrados estamos a ver en listas ordenadas: 1, 2, 3, 4, 5… Lo importante para mantener la semántica del orden es que los atributos <code>start</code> y <code>value</code> sean los que tú quieres que sean, tanto si los indicas explícitamente como si dejas los que vienen por defecto.</p>
+		<h5>Listas no ordenadas</h5>
+		<p>¿Te agobia tanto número romano y tanto alfabeto griego para ordenar las cosas? ¿Quieres simplemente listarlas sin importarte el orden de aparición? Lo que quieres hacer es una lista no ordenada o <code>ul</code>. Este tipo de lista no tiene tantos atributos para su control semántico y su presentación es muy fácil de cambiar vía CSS. Es la que se usa en la típica lista de la compra:</p>
+		<ul>
+			<li>Peras</li>
+			<li>Manzanas</li>
+			<li>Plátanos</li>
+			<li>Mandarinas</li>
+			<li>Ciruelas</li>
+		</ul>
+		<pre class="prettyprint"><code>
+&lt;ul&gt;
+	&lt;li&gt;Peras&lt;/li&gt;
+	&lt;li&gt;Manzanas&lt;/li&gt;
+	&lt;li&gt;Plátanos&lt;/li&gt;
+	&lt;li&gt;Mandarinas&lt;/li&gt;
+	&lt;li&gt;Ciruelas&lt;/li&gt;
+&lt;/ul&gt;
+		</code></pre>
+		<p>Pero, ¿qué pasaría si tuvieras una lista de la compra más compleja, en la que tuvieras que pasarte por diversas secciones del supermercado? Tranquilo: las listas no ordenadas son <strong>anidables</strong>.</p>
+		<ul>
+			<li>Frutería
+				<ul>
+					<li>Peras</li>
+					<li>Manzanas</li>
+					<li>Plátanos</li>
+				</ul>
+			</li>
+			<li>Limpieza
+				<ul>
+					<li>Detergente ropa</li>
+					<li>Suavizante</li>
+					<li>Bayetas</li>
+				</ul>
+			</li>
+			<li>Carnicería
+				<ul>
+					<li>1 kg picada ternera</li>
+					<li>Pechuga de pollo</li>
+				</ul>
+			</li>
+		</ul>
+		<pre class="prettyprint"><code>
+&lt;ul&gt;
+	&lt;li&gt;Frutería
+		&lt;ul&gt;
+			&lt;li&gt;Peras&lt;/li&gt;
+			&lt;li&gt;Manzanas&lt;/li&gt;
+			&lt;li&gt;Plátanos&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;Limpieza
+		&lt;ul&gt;
+			&lt;li&gt;Detergente ropa&lt;/li&gt;
+			&lt;li&gt;Suavizante&lt;/li&gt;
+			&lt;li&gt;Bayetas&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;Carnicería
+		&lt;ul&gt;
+			&lt;li&gt;1 kg picada ternera&lt;/li&gt;
+			&lt;li&gt;Pechuga de pollo&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+		</code></pre>
+		<p>Ahora imagina que tuvieras una lista de tareas ordenadas por prioridades y que entre esas prioridades estuviera comprar una serie de artículos no ordenados. ¿Podrían anidarse esas listas?</p>
+		<ol>
+			<li>Limpiar la cocina</li>
+			<li>Pasar la aspiradora</li>
+			<li>Comprar fruta
+				<ul>
+					<li>Plátanos</li>
+					<li>Peras</li>
+					<li>Manzanas</li>
+				</ul>
+			</li>
+			<li>Ordenar el garaje</li>
+		</ol>
+		<pre class="prettyprint"><code>
+&lt;ol&gt;
+	&lt;li&gt;Limpiar la cocina&lt;/li&gt;
+	&lt;li&gt;Pasar la aspiradora&lt;/li&gt;
+	&lt;li&gt;Comprar fruta
+		&lt;ul&gt;
+			&lt;li&gt;Plátanos&lt;/li&gt;
+			&lt;li&gt;Peras&lt;/li&gt;
+			&lt;li&gt;Manzanas&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;Ordenar el garaje&lt;/li&gt;
+&lt;/ol&gt;
+		</code></pre>
+		<p>Este es un ejemplo muy básico: tanto las listas <code>ul</code> como <code>ol</code> pueden anidarse unas dentro de otras. Puedes anidar solamente listas ordenadas en varios niveles, puedes ordenar solamente listas no ordenadas, o puedes hacer un milhojas vainilla-chocolate. A tu gusto, como necesites.</p>
+		<h4>Listas de definición</h4>
+		<p>Si bien comparten muchas características con las listas simples (<code>ol</code> y <code>ul</code>), las listas de definición o <code>dl</code> son un poco diferentes.</p>
+		<p>Una lista de definición no es una lista de <em>cosas</em> o elementos; es una lista que expone relaciones entre cosas, en la mayoría de los casos pares de cosas: un término que ha de ser definido y su definición. Las relaciones establecidas, en cualquier caso, son jerárquicas, ya que todo <code>dd</code> apunta a un <code>dt</code> superior. Puedes asignar varios <code>dd</code> a un mismo <code>dt</code>, pero no varios <code>dt</code> a un solo <code>dd</code>. Además, las listas de definiciones no son anidables.</p>
+		<dl>
+			<dt>Rojo</dt>
+			<dd>1. El color de los tomates</dd>
+			<dd>2. El color de la sandía</dd>
+			<dt>Amarillo</dt>
+			<dd>El color de los plátanos</dd>
+			<dt>Morado</dt>
+			<dd>El color de los arándanos</dd>
+		</dl>
+		<pre class="prettyprint"><code>
+&lt;dl&gt;
+	&lt;dt&gt;Rojo&lt;/dt&gt;
+	&lt;dd&gt;El color de los tomates&lt;/dd&gt;
+	&lt;dt&gt;Amarillo&lt;/dt&gt;
+	&lt;dd&gt;El color de los plátanos&lt;/dd&gt;
+	&lt;dt&gt;Morado&lt;/dt&gt;
+	&lt;dd&gt;El color de los arándanos&lt;/dd&gt;
+&lt;/dl&gt;
+		</code></pre>
+		<p>Aunque lo habitual es llamarla lista de definiciones (y de hecho con este nombre nació), puedes usar las <code>dl</code> para más cosas aparte de definir términos. Por ejemplo, puedes indicar características o relaciones.</p>
+		<dl>
+			<dt>Juan</dt>
+			<dd>35 años</dd>
+			<dt>Ana</dt>
+			<dd>45 años</dd>
+			<dt>María</dt>
+			<dd>3 años</dd>
+		</dl>
+		<p>Huelga decir que, mediante estilos, puedes modificar la presentación de una lista de definición. Aquí puedes ver una lista de definiciones a la que se ha aplicado la clase <code>def</code>, que establece un borde inferior negro para resaltar los términos a definir.</p>
+		<dl class="def">
+			<dt>Rojo</dt>
+			<dd>El color de los tomates</dd>
+			<dt>Amarillo</dt>
+			<dd>El color de los plátanos</dd>
+			<dt>Morado</dt>
+			<dd>El color de los arándanos</dd>
+		</dl>
+		<h4>Figuras</h4>
+		<p>En ocasiones necesitas ilustrar un tema con una información no textual: un diagrama, una tabla, un mapa o un dibujo. No se trata de una simple imagen decorativa, sino que es una imagen que aporta información y que seguramente quieres completar con una leyenda. En estos casos necesitas la etiqueta <code>figure</code> y su hija <code>figcaption</code>.</p>
+		<figure>
+  			<img src="img/macaque.jpg" alt="Macaco en los árboles" />
+  			<figcaption>Un macaco, Lower Kintaganban River, Borneo. Original por <a href="http://www.flickr.com/photos/rclark/">Richard Clark</a></figcaption>
+		</figure>
+		<pre class="prettyprint"><code>
+&lt;figure&gt;
+  	&lt;img src="img/macaque.jpg" alt="Macaco en los árboles" /&gt;
+  	&lt;figcaption&gt;Un macaco, Lower Kintaganban River, Borneo. Original por &lt;a href="http://www.flickr.com/photos/rclark/"&gt;Richard Clark&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+		</code></pre>
+		<p>También puedes anidar una galería con varias imágenes en un solo figure:</p>
+		<figure>
+  			<img src="img/kookaburra.jpg" alt="Kookburra" />
+  			<img src="img/pelican.jpg" alt="Pelícano parado en la playa" />
+  			<img src="img/lorikeet.jpg" alt="Loro arcoiris" />
+			<figcaption>Pájaros australianos. De izquierda a derecha, kookburra, pelícano y loro arcoiris. Originales por <a href="http://www.flickr.com/photos/rclark/">Richard Clark</a></figcaption>
+		</figure>
+		<pre class="prettyprint"><code>
+&lt;figure&gt;
+	&lt;img src="img/kookaburra.jpg" alt="Kookburra" /&gt;
+	&lt;img src="img/pelican.jpg" alt="Pelícano parado en la playa" /&gt;
+	&lt;img src="img/lorikeet.jpg" alt="Loro arcoiris" /&gt;
+	&lt;figcaption&gt;Pájaros australianos. De izquierda a derecha, kookburra, pelícano y loro arcoiris. Originals by &lt;a href="http://www.flickr.com/photos/rclark/"&gt;Richard Clark&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+		</code></pre>
+		<div class="resalto">
+			<p>Es importante saber que <code>figure</code> y <code>aside</code> no sirven para lo mismo. Debes elegir cuál usar preguntándote a ti mismo si el contenido que quieres poner es esencial para comprender la <code>section</code> en la que se inserta:</p>
+			<p>Si el contenido está simplemente relacionado pero no es importante para comprender la sección, elige <code>aside</code>.</p>
+			<p>Si el contenido es esencial para comprender lo que se cuenta en la sección, elige <code>figure</code>.</p>
+		</div>
+		<p>Más adelante hablaremos de la etiqueta <code>img</code>, que como ves es de autocierre, ya que no puede contener texto ni otras etiquetas en su interior.</p>
+		<h4>Etiqueta &lt;div&gt;</h4>
+		<p>En HTML 4, la etiqueta <code>div</code> se definía como un contenedor genérico para estructurar una página. Aunque puedes aludir a la naturaleza de su contenido asignándole un id o una clase con nombres significativos, <code>div</code> está casi carente de carga semántica. El W3C dice lo siguiente acerca de <code>div</code>:</p>
+		<blockquote>
+			<p lang="en">The div element has no special meaning at all. It represents its children. It can be used with the class, lang, and title attributes to mark up semantics common to a group of consecutive elements.</p>
+			<footer>
+				<cite><a href="http://www.w3.org/html/wg/drafts/html/master/grouping-content.html#the-div-element" hreflang="en">Especificación del W3C para <code>div</code></a></cite>
+			</footer>
+		</blockquote>
+		<p>La etiqueta <code>div</code> es literalmente un contenedor universal, una colección de etiquetas que sí que tienen carga semántica que por el motivo que sea (generalmente por necesidades de maquetación) han de ser agrupadas juntas.</p>
+		<p>Las nuevas etiquetas semánticas a nivel de bloque como <code>article</code> o <code>section</code> asumen mucho del trabajo que antes realizaba <code>div</code>, pero <code>div</code> aún tiene su lugar en el mundo de HTML5. Y es que, por mucho que nos esforcemos, no podremos encontrar una etiqueta HTML con carga semántica para cada necesidad concreta que se nos presente en la vida, porque probablemente necesitaríamos miles de ellas y olvidaríamos que HTML, más que un lenguaje, es una <strong>sintaxis</strong> que nos permite escribir, expresarnos y leer en una lengua natural, en este caso el español o castellano. No podemos convertir HTML en una lengua paralela con un vocabulario de miles de términos.</p>
+		<p>Para saber si debes utilizar la etiqueta <code>div</code> o algún otro contenedor con mayor carga semántica debes hacerte a ti mismo una serie de preguntas:</p>
+		<ul>
+			<li>¿Es parte de la navegación del sitio?</li>
+			<li>¿Es el contenido que quiero empaquetar subsidiario al contenido que está alrededor?</li>
+			<li>Si este contenido se imprimiera en una página de forma independiente, sin nada de contexto adicional, ¿tendría sentido?</li>
+		</ul>
+		<p>Debes evaluar tu contenido cuidadosamente, pensar sobre su naturaleza y reflexionar acerca del contexto que lo rodea. Es cierto que en HTML5 usarás <code>div</code> con mucha menor frecuencia que antes; no obstante, no son pocas las ocasiones en las que necesitas un contenedor que no añada <strong>nada</strong> de significado a tu contenido. Y no hay <strong>nada</strong> más anodino que un buen <code>div</code>. La etiqueta <code>div</code> es como <a href="https://twitter.com/sincarisma">@sincarisma</a>, pero en HTML.</p>
+		<p>Este diagrama de flujo te ayudará a saber cuándo <code>div</code> es realmente tu última opción para maquetar contenidos.</p>
+		<img src="img/h5d-sectioning-flowchart.png" />
+		<h3>Semántica a nivel de texto</h3>
+		<h4>Etiqueta &lt;a&gt;</h4>
+		<p>El elemento anchor o <code>a</code> define un vínculo, el punto de destino de un vínculo o ambos.</p>
+		<h5>Atributo <code>href</code></h5>
+		<p>Este atributo, que antes se consideraba imprescindible para definir el destino de un hiperenlace, ya no lo es en HTML5. Su omisión hace que se cree un anclaje o marcador en la página. En este caso, será necesario aplicar el atributo <code>id</code> para identificar el trozo de texto que se quiere usar de marcador. Por ejemplo:</p>
+		<div class="resalto">
+			<p>Esto es un párrafo en el que creo un <a href="#anclaje" title="enlace a un anclaje" lang="en">enlace</a> hacia otra sección del libro. En la otra sección del libro está el anclaje.</p>
+			<hr />
+			<p lang="en">This is other paragraph. The anchor is <a id="anclaje">here</a>.</p>
+		</div>
+		<pre class="prettyprint"><code>
+&lt;p&gt;Esto es un párrafo en el que creo un &lt;a href="#anclaje"&gt;enlace&lt;/a&gt; hacia otra sección del libro. En la otra sección del libro está el anclaje.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Esto es otro párrafo. El texto de anclaje está &lt;a id="anclaje">aquí&lt;/a&gt;.&lt;/p&gt;
+		</code></pre>
+		<p>Enlace a <a href="otroarchivo.html#nombredeseccion">otro archivo</a> de mi libro.</p>
+		<p>Enlace a <a href="http://es.wikipedia.org/wiki/Mont_Blanc#Investigaci.C3.B3n_cient.C3.ADfica">Investigación científica del Mont Blanc en Wikipedia</a>.</p>
+		<p>No obstante, semánticamente habría sido más adecuado dotar al segundo párrafo del id <code>anclaje</code>, en vez de crear una etiqueta solamente para eso. Y también se habría leído mejor, ya que habría cabido la posibilidad (en un texto más largo) de que, al desplazarse por el documento y situar el cursor justo en el renglón donde se encuentra el anclaje, la palabra de destino quedara huérfana del resto del párrafo, hurtando así al lector el contexto de la frase.</p>
+		<pre class="prettyprint"><code>
+&lt;p&gt;Esto es un párrafo en el que creo un &lt;a href="#anclaje"&gt;enlace&lt;/a&gt; hacia otra sección del libro. En la otra sección del libro está el anclaje.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p id="anclaje"&gt;Esto es otro párrafo. El párrafo es el anclaje.&lt;/p&gt;
+		</code></pre>
+		<p>El atributo <code>href</code> indica el destino del enlace, ya sea una <abbr title="Uniform Resource Locator" lang="en">URL</abbr> externa o interna (como <a href="google.es">google.es</a> o <a href="capitulo8.html">capitulo8.html</a>) o el fragmento de una URL (como <a href="google.es#anclaje">google.es#anclaje</a> o <a href="#anclaje">#anclaje</a>).</p>
+		<h4>Etiquetas &lt;em&gt;, &lt;cite&gt;, &lt;quote&gt;, &lt;i&gt;</h4>
+		<p>Presentamos estas cuatro etiquetas juntas porque generalmente se visualizan exactamente igual. Bueno, en el caso de la etiqueta &lt;q&gt; el texto suele mostrarse entrecomillado. Pero las cuatro muestran el contenido igual o casi igual: <em>en cursiva</em>.</p>
+		<p>¿Para qué cuatro etiquetas si el resultado es el mismo? Pues porque el resultado no es solamente lo que ves.</p>
+		<dl class="def">
+			<dt><code>em</code></dt>
+			<dd>Viene del inglés <i class="extranjero" lang="en">emphasis</i>. Cuando encierras una palabra o un sintagma con la etiqueta <code>em</code> estás <em>enfatizando</em> ese texto. El software de audiodescripción que utilizan los ciegos leerá ese texto en un tono más intenso.</dd>
+			<dt><code>cite</code></dt>
+			<dd>La etiqueta <code>cite</code> sirve para citar títulos de obras, ya sea artículos periodísticos, libros, canciones, películas u otras obras de carácter artístico, académico, periodístico o científico. Por ejemplo, <cite>El sueño de una noche de verano</cite>, de William Shakespeare.</dd>
+			<dt><code>quote</code></dt>
+			<dd>La etiqueta <code>quote</code> sirve para citar <strong>contenido textual</strong> de algún recurso externo sin salirse del párrafo o elemento en el que estamos. Pueden ser declaraciones de un personaje o un fragmento de una obra cuyo título indicamos con <code>cite</code>. Los navegadores suelen rodear con comillas el contenido de una etiqueta <code>quote</code>. <q>El tipo de comillas puede cambiarse con CSS</q>.</dd>
+			<dt><code>i</code></dt>
+			<dd>Puede parecer que la etiqueta <code>i</code>, que no significa más que <i class="extranjero" lang="en">italics</i>, es una forma anticuada de indicar que un trozo de texto va en cursiva, ya que hay otras etiquetas mucho más semánticas que esta. No obstante, la etiqueta <code>i</code> representa un trozo de texto en un modo alternativo. Indica un resalte con respecto a la prosa normal de manera que se señala un texto con alguna característica diferente, como una taxonomía, un término técnico, una expresión en una lengua extranjera, una transliteración, un pensamiento o incluso el nombre de un barco. En resumen, la etiqueta <code>i</code> sirve para resaltar estilísticamente aquellos términos que ni son citas textuales, ni nombres de obras artísticas ni tienen una importancia relativa mayor que el texto circundante. Por ejemplo, mediante esta etiqueta podemos indicar qeu <i class="extranjero" lang="en">italics</i> es una palabra en inglés.<br /><code>&lt;i class="extranjero" lang="en" title="itálicas"&gt;italics&lt; /i&gt;</code>.</dd>
+		</dl>
+		<h5>Ejemplos de uso</h5>
+		<p>Podemos combinar <code>cite</code> y <code>quote</code> para hacer una cita e indicar su autor:</p>
+		<p class="resalto">Como dijo <cite>Charles Bukowski</cite>, <q>un intelectual dice algo simple de forma complicada, mientras que un artista dice algo complicado de forma simple</q>.</p>
+		<pre class="prettyprint"><code>
+&lt;p&gt;Como dijo &lt;cite&gt;Charles Bukowski&lt;/cite&gt;, &lt;q&gt;un intelectual dice algo simple de forma complicada, mientras que un artista dice algo complicado de forma simple&lt;/q&gt;.&lt;/p&gt;
+		</code></pre>
+		<p>También puede usarse <code>cite</code> para indicar el título de una obra en un bibliografía.</p>
+		<p class="resalto"><cite>Declaración Universal de los Derechos Humanos</cite>, Naciones Unidas, diciembre de 1948. Adoptada por resolución 217 A (III) de la Asamblea General.</p>
+		<pre class="prettyprint"><code>
+&lt;p class="resalto"&gt;&lt;cite&gt;Declaración Universal de los Derechos Humanos&lt;/cite&gt;, Naciones Unidas, diciembre de 1948. Adoptada por resolución 217 A (III) de la Asamblea General.&lt;/p&gt;
+		</code></pre>
+		<p>Ya hemos visto cómo se usan correctamente <code>q</code> y <code>cite</code>. Aquí tienes un ejemplo de uso erróneo:</p>
+
+		<pre><code style="color:red;">
+&lt;p&gt;La frase &lt;cite&gt;Ladran, Sancho, luego cabalgamos&lt;/cite&gt;, cita frecuentemente atribuida a Cervantes, no aparece en ninguna parte de su libro Don Quijote de La Mancha.&lt;/p&gt;</code></pre>
+		<p>Esta sería una forma de etiquetar correctamente el texto:</p>
+		<pre class="prettyprint"><code>
+&lt;p&gt;La frase &lt;q&gt;Ladran, Sancho, luego cabalgamos&lt;/q&gt;, cita frecuentemente atribuida a &lt;strong&gt;Cervantes&lt;/strong&gt;, no aparece en ninguna parte de su libro &lt;cite&gt;Don Quijote de La Mancha&lt;/cite&gt;.&lt;/p&gt;
+		</code></pre>
+		<p class="resalto">La frase <q>Ladran, Sancho, luego cabalgamos</q>, cita frecuentemente atribuida a <strong>Cervantes</strong>, no aparece en ninguna parte de su libro <cite>Don Quijote de La Mancha</cite>.</p>
+		<p>Puedes consultar más usos interesantes de estas etiquetas en <a href="http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-cite-element">http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-cite-element</a>.</p>
+		<h4>Etiquetas &lt;strong&gt; y &lt;b&gt;</h4>
+		<p>La etiqueta <code>strong</code>, que significa <i class="extranjero" lang="en">fuerte</i> en inglés, indica que el contenido que engloba tiene una fuerte importancia. Indica que la importancia relativa de ese contenido es mayor con respecto al texto que tiene a su alrededor. La etiqueta <code>strong</code>, que enfatiza el texto, no lo cambia de significado, solamente resalta su importancia. Mientras que la etiqueta <code>em</code> representa <i class="extranjero" lang="en">emphasis</i>, la etiqueta <code>strong</code> representaba hace unos años <i class="extranjero" lang="en"><b>strong</b>er emphasis</i> (actualmente, en HTML5, <i class="extranjero" lang="en">stronger importance</i>, un matiz no desdeñable), un énfasis o importancia más fuerte que <code>em</code>.</p>
+		<p>La etiqueta <code>b</code> representa un trozo de texto que necesita un estilado diferente por motivos prácticos diversos, sin que eso signifique que tiene una importancia mayor. La etiqueta <code>b</code> tampoco debe ser confundida con <code>i</code>, que se usa para jergas técnicas y términos extranjeros. Usaremos la etiqueta <code>b</code> para términos que no tienen una importancia mayor que los circundantes en el texto, pero que puede ser práctico que estén resaltados con respecto al texto. Por ejemplo, en una entrevista es habitual que las preguntas del entrevistador estén en negrita. Es una forma de diferenciar las preguntas de las respuestas, una simple convención tipográfica. Las preguntas no son más importantes que las respuestas, es más, podría decirse que las respuestas son más importantes que las preguntas. Resaltar con <code>strong</code> las preguntas del entrevistador sería del todo inadecuado, porque al lector le interesan las respuestas del entrevistado, pero para él es cómoda esa convención tipográfica que le ayuda a diferenciar las preguntas y las respuestas y situarse rápidamente en el texto. Esta es la función que cumple ahora la etiqueta <code>b</code>. Otros ejemplos pueden ser nombres de personajes famosos en una crónica rosa, marcas comerciales en manuales técnicos o el estilado de letras iniciales de capítulos. En todos los casos son meras convenciones tipográficas. Además, como se demuestra en el ejemplo que ponemos a continuación, ni siquiera tenemos por qué limitarnos a la negrita tradicional con que se muestra por defecto la etiqueta <code>b</code>, sino que podemos aplicar otros estilos variados.</p>
+		<p>En este caso, la frase de apertura está en negrita únicamente por motivos estilísticos, pero si fuera relevante semánticamente hablando, se le aplicaría la etiqueta <code>strong</code>.</p>
+
+
+		<p class="resalto">
+			<span class="inicio-capitulo"><b>L</b>orem ipsum dolor sit amet,</span> consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		<pre class="prettyprint"><code>
+span.inicio-capitulo {
+	font-weight:bold;
+	font-family:serif;
+}
+span.inicio-capitulo b {
+	font-size: 360%;
+	line-height: 62%;
+	float:left;
+	padding-right:0.1em;
+	margin-top:12px;
+}
+		</code></pre>
+		<h4>Etiqueta &lt;u&gt;</h4>
+		<p>Etiquetas que antes eran estrictamente presentacionales como <code>i</code>, <code>b</code>, <code>small</code> y <code>hr</code> se han redefinido en HTML5 con nuevas cargas semánticas o, en algún caso, se han declarado obsoletas. La etiqueta <code>u</code> estuvo por un tiempo en la tierra de las obsoletas, pero, dado que hay un par de situaciones en las que puede tener relevancia semántica, el W3C la ha vuelto a traer a la palestra. En cualquier caso, los casos de uso siguen siendo <strong>muy limitados</strong> y sería muy raro que la necesitaras; no obstante, si se da el caso, a continuación explicamos las escasas ocasiones en las que vas a necesitar esta etiqueta.</p>
+		<p>Antes de HTML5, &lt;u&gt; era solamente para marcar un texto subrayado. La especificación HTML4 disuadía a los editores de utilizar el atributo <code>font-style</code> o cualquier elemento presentacional, e incluso declaró obsoleta la etiqueta <code>u</code>, recomendando que usáramos CSS en su lugar. Antes de que el propio W3C tomara medidas, el uso de <code>u</code> estaba ya muy mal visto en la comunidad de editores de HTML, ya que los navegadores suelen mostrar los enlaces subrayados por defecto. Si mediante el subrayado hacemos que un texto que no lo es parezca un enlace, podemos provocar frustración en el usuario. Por este motivo, en un principio, la etiqueta &lt;u&gt; se sacó de la especificación HTML5.</p>
+		<p>Sin embargo, hay un par de casos en los que el texto no enlazable <em>se subraya convencionalmente</em> y eso implica un significado, según el WhatWG</p>
+		<blockquote class="resalto">
+			<p>The <code>u</code> element represents a span of text with an unarticulated, though explicitly rendered, non-textual annotation, such as labeling the text as being a proper name in Chinese text (a Chinese proper name mark), or labeling the text as being misspelt.</p>
+			<footer>
+				<cite><a href="http://www.whatwg.org/specs/web-apps/current-work/complete/text-level-semantics.html#the-u-element" title="4.6 Text-level semantics — Web Applications 1.0">Especificación HTML5 WhatWG</a></cite>
+			</footer>
+		</blockquote>
+		<p>El WhatWG también advierte del posible conflicto en cuanto a visualización por defecto entre la etiqueta <code>u</code> y la etiqueta <code>a</code> y ruega encarecidamente a los autores que eviten usar la etiqueta <code>u</code> cuando pueda ser confundida con un enlace.</p>
+		<p>El uso de <code>u</code> es tan confuso que en ocasiones para documentarse hay que acudir a los chats. En el IRC del WhatWG <a href="http://en.wikipedia.org/wiki/Ian_Hickson">Ian Hickson</a> comenta que la etiqueta <code>u</code> es para cuando tú estás anotando algo, pero no dices exactamente qué es; el significado de la nota se asume por el contexto.</p>
+		<p><img src="img/ircianhickson.png" width="1100" /></p>
+		<p>En el caso de que te decidas por el uso de <code>u</code> para indicar un error ortográfico, es probable que desees utilizar la propiedad CSS <code>text-decoration: line-through;</code>.</p>
+		<p class="resalto">No se dice <u class="errata">dentrífico</u>, se dice <i>dentífrico</i>.</p>
+		<h4>Etiquetas &lt;s&gt; y &lt;del&gt;</h4>
+		<p>La etiqueta <code>s</code> representa contenidos que ya no son correctos o exactos. Esta etiqueta no es apropiada para marcar ediciones de documentos; si quieres indicar que un trozo de texto se ha eliminado de un documento, es mejor que uses <code>del</code>.</p>
+		<p>En este ejemplo, el precio recomendado de un artículo se ha marcado como irrelevante con la etiqueta <code>s</code> tras la asignación de un nuevo precio de venta recomendado.</p>
+		<div class="resalto">
+			<p>¡Compra nuestra limonada!</p>
+			<p><s>Precio de venta recomendado: 3,95€ la botella</s></p>
+			<p><strong>¡Ahora a la venta por solo 2,95€ la botella!</strong></p>
+		</div>
+		<pre class="prettyprint"><code>
+&lt;p&gt;¡Compra nuestra limonada!&lt;/p&gt;
+&lt;p&gt;&lt;s&gt;Precio de venta recomendado: 3,95€ la botella&lt;/s&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;¡Ahora a la venta por solo 2,95€ la botella!&lt;/strong&gt;&lt;/p&gt;
+		</code></pre>
+		<p>En este otro ejemplo, tenemos una lista de tareas en la que algunas se han completado (y esas están marcadas con una etiqueta <code>del</code> y el atributo <code>datetime</code> para indicar cuándo se hicieron) y otras no.</p>
+		<div class="resalto">
+			<ul>
+				<li>Vaciar el lavavajillas</li>
+				<li>Ir al I #ebookspain Open, en Sevilla</li>
+				<li><del datetime="2015-02-25T20:00">Terminar el curso de edición</del></li>
+				<li>Quedar con los amigos</li>
+			</ul>
+		</div>
+		<pre class="prettyprint"><code>
+&lt;ul&gt;
+	&lt;li&gt;Vaciar el lavavajillas&lt;/li&gt;
+	&lt;li&gt;Ir al I #ebookspain Open, en Sevilla&lt;/li&gt;
+	&lt;li&gt;&lt;del datetime="2015-02-25T20:00">Terminar el curso de edición&lt;/del&gt;&lt;/li&gt;
+	&lt;li&gt;Quedar con los amigos&lt;/li&gt;
+&lt;/ul&gt;
+		</code></pre>
+		<p>La forma en que ambas etiquetas se muestran por defecto es la misma, pero, como ves, no cumplen la misma función.</p>
+		<h4>Etiqueta &lt;mark&gt;</h4>
+		<p>La etiqueta <code>mark</code> representa un trozo de texto en un documento marcado o resaltado por su relevancia en otro contexto. Cuando se usa en una cita u otro bloque de texto referenciado en un documento, realza el texto de una forma que no estaba presente en el documento original; por ejemplo, un trozo de texto en una publicación de hace un tiempo que acaba de ser sometido a un escrutinio adicional.</p>
+		<p>La etiqueta <code>mark</code> viene a traer a HTML lo que hemos hecho toda la vida con el marcador fluorescente para resaltar partes del texto que nos interesaban.</p>
+		<p>Este es un ejemplo tomado de la vida real: ayer mismo salió el BOE con el nuevo programa de la asignatura de Religión. Las redes sociales ardieron con reacciones variadas por parte de los internautas. En general, todos los tweets que vi optaron por <em>resaltar</em> el texto que les interesaba mediante el uso de un marcador. Repentinamente, el BOE se había vuelto objeto de escrutinio.</p>
+		<p><img src="img/boereligion.jpg" /></p>
+		<p><img src="img/drdoldiboereligion.png" /></p>
+		<p>El aspecto que los navegadores suelen dar por defecto a la etiqueta <code>mark</code> es parecido al aspecto que se consigue mediante la selección de texto con el ratón.</p>
+		<p>Esto es un ejemplo de <mark>texto resaltado con mark</mark>.</p>
+		<pre class="prettyprint"><code>
+&lt;p&gt;Esto es un ejemplo de &lt;mark&gt;texto resaltado con mark&lt;/mark&gt;.&lt;/p&gt;
+		</pre></code>
+		<p><strong>Diferencias con respecto a <code>em</code> y <code>strong</code></strong></p>
+		<p>Si bien <code>em</code> se corresponde con <i>énfasis</i> y <code>strong</code> se corresponde con <i>fuerte importancia</i>, la mayoría de las veces <code>mark</code> se corresponderá con <i>escrutinio</i>.</p>
+		<p>Usamos <code>mark</code> cuando no queremos darle más importancia al texto marcado que al texto circundante, cuando solo queremos examinarlo con detenimiento: escrutarlo.</p>
+		<p>También suele usarse <code>mark</code> para marcar resultados de búsqueda, pero nosotros como editores de libro digital no podemos controlar este uso, ya que no programamos aplicaciones dinámicas.</p>
+		<p><img src="img/html-mark-tag.jpg" /></p>
+
+
+
+		
+		<h4>Etiqueta &lt;var&gt;</h4>
+		<p>La etiqueta <code>var</code> representa una variable. Puede ser una variable en una expresión matemática o una variable de programación. También puede ser un parámetro o una magnitud física, o simplemente el nombre de una variable acerca de la cual estás hablando en el texto.</p>
+		<p>El W3C <strong>recomienda el uso de MathML</strong> para las expresiones matemáticas en documentos HTML y desaconseja el uso de <code>var</code> cuando se llega a una cierta complejidad matemática, ya que <code>var</code> carece de la especificidad que requiere el lenguaje matemático. No obstante, a continuación te mostramos algunos ejemplos de buen uso de <code>var</code> según el W3C.</p>
+		<p>A continuación mostramos un caso de uso de <code>var</code> como nombre de variable referenciada en un texto:</p>
+		<p class="resalto">Si hubiera <var>n</var> tuberías en dirección a la fábrica de helados entonces esperaría <em>al menos</em> <var>n</var> sabores de helado diferentes.</p>
+		<pre class="prettyprint"><code>
+&lt;p&gt;Si hubiera &lt;var&gt;n&lt;/var&gt; tuberías en dirección a la fábrica de helados entonces esperaría &lt;em&gt;al menos&lt;/em&gt; &lt;var&gt;n&lt;/var&gt; sabores de helado diferentes.&lt;/p&gt;
+		</code></pre>
+		<p>Fíjate en que, por defecto, el contenido de la etiqueta <code>var</code> suele mostrarse en cursiva, como las etiquetas <code>em</code>, <code>cite</code>, <code>q</code> e <code>i</code>. Puedes modificar los estilos de <code>var</code> mediante la utilización de CSS.</p>
+		<p>En este ejemplo, se muestra una ecuación con una leyenda debajo que muestra las variables utilizadas en la ecuación. La expresión matemática en sí misma se marca con MathML, pero las variables aparecen referenciadas en la leyenda de la figura mediante la etiqueta <code>var</code>.</p>
+		<pre class="prettyprint"><code>
+&lt;figure&gt;
+	&lt;math&gt;
+		&lt;mi&gt;a&lt;/mi&gt;
+		&lt;mo&gt;=&lt;/mo&gt;
+		&lt;msqrt&gt;
+			&lt;msup&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;
+			&lt;mi&gt;+&lt;/mi&gt;
+			&lt;msup&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;
+		&lt;/msqrt&gt;
+	&lt;/math&gt;
+	&lt;figcaption&gt;Uso del teorema de Pitágoras para resolver la hipotenusa &lt;var&gt;a&lt;/var&gt; de un triángulo con catetos &lt;var&gt;b&lt;/var&gt; y &lt;var&gt;c&lt;/var&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+		</code></pre>
+		<p>En este otro caso, se usa en una frase la ecuación que describe la relación entre masa y energía, por lo que la etiqueta <code>var</code> se usa para marcar las variables y constantes en esa ecuación:</p>
+		<p class="resalto">Entonces ella se volvió hacia la pizarra y cogió la tiza. Después de pensar unos segundos, escribió <var>E</var> = <var>m</var> <var>c</var><sup>2</sup>. El profesor la miró con admiración.</p>
+		<pre class="prettyprint"><code>
+&lt;p&gt;Entonces ella se volvió hacia la pizarra y cogió la tiza. Después de pensar unos segundos, escribió &lt;var&gt;E&lt;/var&gt; = &lt;var&gt;m&lt;/var&gt; &lt;var&gt;c&lt;/var&gt;&lt;sup&gt;2&lt;/sup&gt;. El profesor la miró con admiración.&lt;/p&gt;
+		</code></pre>
+		<h4>Etiquetas &lt;sub&gt; y &lt;sup&gt;</h4>
+		<p>Si has prestado atención en los ejemplos anteriores para la etiqueta <code>var</code>, habrás visto que en diversas ocasiones se usaban las etiquetas <code>sub</code> y <code>sup</code> para denotar números u otros caracteres en subíndice y superíndice, respectivamente.</p>
+		<p>Tanto <code>sub</code> como <code>sup</code> deben usarse solamente para representar convenciones tipográficas con significados específicos, no para maquetar un texto. En general, los autores deberían usar estas etiquetas solamente si su <em>ausencia</em> cambia el significado del texto.</p>
+		<p>En ciertas lenguas, los superíndices son parte de las convenciones tipográficas para algunas abreviaturas.</p>
+		<div class="resalto noabbr">
+			<p>Hoy han venido dos alumnas nuevas a clase. Son <span lang="fr"><abbr>M<sup>lle</sup></abbr> Gwendoline</span> y
+<span lang="fr"><abbr>M<sup>me</sup></abbr> Denise</span>.</p>
+		</div>
+		<p>También puedes utilizar la etiqueta <code>sup</code> para indicar una nota al pie.</p>
+		<div class="resalto">
+			<p>El gato, de domesticación más reciente que el perro<sup><a href="#ejemplosup1">1</a></sup>, suele mostrarse aún esquivo con el hombre.</p>
+			<hr />
+			<ol>
+				<li id="ejemplosup1">Se cree que la domesticación del gato comenzó entre el 7500 y el 7000 <abbr title="antes de Cristo">a. C.</abbr></li> 
+				<li id="ejemplosup2">Otra nota al pie</li>
+			</ol>
+		</div>
+		<pre class="prettyprint"><code>
+&lt;p&gt;El gato, de domesticación más reciente que el perro&lt;sup&gt;&lt;a href="#ejemplosup1"&gt;1&lt;/a&gt;&lt;/sup&gt;, suele mostrarse aún esquivo con el hombre.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+	&lt;li id="ejemplosup1"&gt;Se cree que la domesticación del gato comenzó entre el 7500 y el 7000 &lt;abbr title="antes de Cristo"&gt;a. C.&lt;/abbr&gt;&lt;/li&gt;
+	&lt;li id="ejemplosup2"&gt;Otra nota al pie&lt;/li&gt;
+&lt;/ol&gt;
+		</code></pre>
+		<p>Anteriormente hemos visto las etiquetas <code>sub</code> y <code>sup</code> en expresiones matemáticas. Recuerda que el W3C recomienda encarecidamente que se use MathML cuando se utilice lenguaje matemático, pero puedes optar por usar <code>sub</code> y <code>sup</code> si no quieres un marcado matemático detallado.</p>
+		<h4>Etiquetas &lt;code&gt; y &lt;samp&gt;</h4>
+		<p>La etiqueta <code>code</code> es tal vez la más repetida en este tutorial. Cada vez que ves un trozo de texto en color verde oliva es porque he utilizado la etiqueta <code>code</code> para resaltarlo y darle sentido.</p>
+		<p>La etiqueta <code>code</code> representa un fragmento de código informático: desde un nombre de etiqueta XML a un nombre de archivo, pasando por un programa informático o cualquier otra cadena de caracteres que un ordenador pueda reconocer.</p>
+		<p>No hay manera formal de indicar el lenguaje informático que estás marcando. En ocasiones un autor puede querer asignar un lenguaje informático concreto a una etiqueta <code>code</code> en particuar; por ejemplo, si está utilizando un <i class="extranjero" lang="en">script</i> que le ayude a resaltar el código de ejemplo con colores. En esos casos, puede usar el atributo <code>class</code> con un valor predeterminado asignado, por ejemplo <code>language-html</code>. Los autores de scripts con este fin suelen suministrar listas con los nombres de los lenguajes soportados. En este tutorial usamos el script <code>prettify</code>, que reconoce HTML y CSS por defecto sin que se le indique. Si tienes curiosidad, puedes echar un vistazo al código de <code>prettify</code> aquí: <a href="https://code.google.com/p/google-code-prettify/">https://code.google.com/p/google-code-prettify/</a></p>
+		<p>Puede usarse la etiqueta <code>code</code> en línea (en este tutorial verás muchos trozos breves de código resaltados en color verde oliva en mitad de un párrafo) o bien en bloque junto con la etiqueta <code>pre</code>, que, como hemos visto antes, muestra el texto preformateado con tabuladores y espacios. La etiqueta <code>pre</code> tiene usos diversos y no siempre se usa para mostrar trozos de código, por lo que si se usa para mostrar código debe utilizarse <strong>siempre</strong> en combinación con <code>code</code>.</p>
+		<p>La etiqueta <code>samp</code> sirve para citar <strong>código de salida concreto</strong> de algún programa ejecutado previamente.</p>
+		<p>La etiqueta <code>output</code> puede usarse para proveer un <i class="extranjero" lang="en">output</i> en una aplicación web.</p>
+		<p>Mientras que puedes utilizar la etiqueta <code>samp</code> para citar el resultado de la ejecución de un programa en un libro digital, la etiqueta <code>output</code> solo se entiende en aplicaciones web, por lo que esta etiqueta no es útil por ahora en EPUB3.</p>
+		<h4>Etiqueta &lt;abbr&gt;</h4>
+		<p>La etiqueta <code>abbr</code> no es nueva en HTML5, aunque ha sido redefinida debido, en parte, a la eliminación de la etiqueta <code>acronym</code>. Antes existía una dualidad: la etiqueta <code>acronym</code> se usaba únicamente para las siglas o acrónimos, mientras que la etiqueta <code>abbr</code> se utilizaba para el resto de abreviaturas. Esto provocaba confusión entre los autores de HTML, que no siempre tenían claro cuándo un término era un acrónimo o no (por ejemplo, <b>Banesto</b> es el acrónimo de <i>Banco Español de Crédito</i>). Ahora <code>abbr</code> se usa para todo tipo de abreviaturas, incluidos los acrónimos. Aquí tienes unos ejemplos:</p>
+
+		<div class="resalto">
+			<p>Soy cliente de <abbr title="Banco Español de Crédito">Banesto</abbr>.</p>
+			<p>Vivo en <abbr lang="en" title="United States of America">USA</abbr>.</p>
+		</div>
+		<pre class="prettyprint"><code>
+&lt;p&gt;Soy cliente de &lt;abbr title="Banco Español de Crédito"&gt;Banesto&lt;/abbr&gt;.&lt;/p&gt;
+&lt;p&gt;Vivo en &lt;abbr language="en" title="United States of America"&gt;USA&lt;/abbr&gt;.&lt;/p&gt;
+		</code></pre>
+		<p>En algunos navegadores esta útil etiqueta no se diferencia del texto circundante de forma especial hasta que el lector sitúa el puntero del ratón en la abreviatura, mientras que en otros se suele mostrar un borde inferior punteado para indicar la presencia de esta etiqueta. Puedes modificar la visualización del texto etiquetado con <code>abbr</code> mediante <abbr language="en" title="Cascading Style Sheet">CSS</abbr>, para poner el punteado convencional o cualquier otro estilo que prefieras.</p>
+		<pre class="prettyprint"><code>
+abbr {
+	border-bottom:1px dotted #999999;
+}
+		</code></pre>
+
+		<h4>Etiqueta &lt;dfn&gt;</h4>
+		<p>La etiqueta <code>dfn</code> (del inglés <i class="extranjero" lang="en">definition</i>) representa la definición de un término. El párrafo, lista de definición o sección que sea su ancestro más cercano debe contener también la(s) definicione(s) para el término dado por la etiqueta <code>dfn</code>.</p>
+		<p>Si la etiqueta <code>dfn</code> tiene un atributo <code>title</code>, el valor exacto de ese atributo es el término que está siendo definido.</p>
+		<p>Si la etiqueta <code>dfn</code> contiene exclusivamente una etiqueta <code>abbr</code> como hija y esa etiqueta tiene un atributo de tipo <code>title</code>, el valor exacto de <em>ese</em> atributo es el término que está siendo definido.</p>
+		<p>Si no se da ninguno de los dos casos anteriores, es el <code>textContent</code> o contenido textual exacto (lo que hay entre la etiqueta de apertura y la etiqueta de cierre) del elemento <code>dfn</code> lo que nos da el término que se define.</p>
+		<p>Si el atributo <code>title</code> está presente en la etiqueta <code>dfn</code>, <strong>debe contener solamente</strong> el término que se define.</p>
+		<p>El atributo <code>title</code> de los elementos ancestros no afecta a <code>dfn</code>.</p>
+		<p>Una etiqueta <code>a</code> que apunta a un elemento <code>dfn</code> representa una instancia del término definido por <code>dfn</code>.</p>
+		<p>En el siguiente ejemplo, el término "Sistema de Apertura de Puerta" primero se define en el primer párrafo, para después usarse en el segundo.</p>
+		<pre class="prettyprint"><code>
+&lt;p&gt;El &lt;dfn&gt;&lt;abbr title="Sistema de Apertura de Puerta"&gt;SAP&lt;/abbr&gt;&lt;/dfn&gt; es un aparato que permite a los colaboradores externos autorizados acceder al laboratorio mediante el reconocimiento del iris.&lt;/p&gt;
+&lt;!-- ... Más adelante en el documento --&gt;
+&lt;p&gt;Debido a un error en el sistema, el &lt;abbr title="SAP"&gt;SAP&lt;/abbr&gt; del centro de datos reconoció como autorizado a un pirata informático.&lt;/p&gt;
+		</code></pre>
+		<p>Mediante la adición de una etiqueta <code>a</code>, la referencia puede hacerse explícita:</p>
+		<pre class="prettyprint"><code>
+&lt;p&gt;El &lt;dfn id="sap"&gt;&lt;abbr title="Sistema de Apertura de Puerta"&gt;SAP&lt;/abbr&gt;&lt;/dfn&gt; es un aparato que permite a los colaboradores externos autorizados acceder al laboratorio mediante el reconocimiento del iris.&lt;/p&gt;
+&lt;!-- ... Más adelante en el documento --&gt;
+&lt;p&gt;Debido a un error en el sistema, el &lt;a href="#sap"&gt;&lt;abbr title="SAP"&gt;SAP&lt;/abbr&gt;&lt;/a&gt; del centro de datos reconoció como autorizado a un pirata informático.&lt;/p&gt;
+		</code></pre>
+		<h4>Etiqueta &lt;small&gt;</h4>
+		<p>La etiqueta <code>small</code>, que antes se usaba para mostrar texto más pequeño que el circundante, ahora tiene una nueva carga semántica y se usa para comentarios adicionales (en inglés <i class="exranjero" lang="en">side comments</i>, el equivalente en línea de los bloques <i class="extranjero" lang="en">aside</i>).</p>
+		<p>El texto en <code>small</code> no tiene por qué ser más pequeño que el texto circundante, aunque suela mostrarse así. Además, tampoco afecta a la semántica de <code>em</code> o <code>strong</code>.</p>
+		<p>Puedes usar <code>small</code> para las típicas notas legales que aparecen en el footer o la columna de margen de una página web. En un libro es más probable que uses <code>small</code> en la información de créditos.</p>
+		<h4>Etiqueta &lt;br /&gt;</h4>
+		<p>La etiqueta <code>br</code> representa una ruptura de línea. Esta etiqueta solamente debe usarse para cambios de renglón que realmente son relevantes en el contenido, como por ejemplo en poemas o direcciones (etiqueta <code>address</code>). La etiqueta <code>br</code> no debe usarse para conformar agrupaciones temáticas de contenidos o formar párrafos.</p>
+		<pre class="prettyprint"><code>
+&lt;p&gt;Cerrar podrá mis ojos la postrera&lt;br /&gt;
+sombra, que me llevare el blanco día,&lt;br /&gt;
+y podrá desatar esta alma mía&lt;br /&gt;
+ora, a su afán ansioso linsojera;&lt;/p&gt;
+&lt;p&gt;mas no de esotra parte en la ribera&lt;br /&gt;
+dejará la memoria en donde ardía;&lt;br /&gt;
+nadar sabe mi llama la agua fría,&lt;br /&gt;
+y perder el respeto a ley severa;&lt;/p&gt;
+&lt;p&gt;Alma a quien todo un Dios prisión ha sido,&lt;br /&gt;
+venas que humor a tanto fuego han dado,&lt;br /&gt;
+médulas que han gloriosamente ardido,&lt;/p&gt;
+&lt;p&gt;su cuerpo dejarán, no su cuidado;&lt;br /&gt;
+serán ceniza, mas tendrán sentido.&lt;br /&gt;
+Polvo serán, mas polvo enamorado.&lt;br /&gt;
+		</code></pre>
+
+
+		<h4>Etiqueta &lt;span&gt;</h4>
+		<p>A semejanza de <code>div</code>, <code>span</code> es un contenedor genérico vacío de significado. Sin embargo, se diferencia de <code>div</code> en una simple cuestión de maquetación: es un contenedor a nivel de línea, un contenedor microtipográfico si se quiere. No es una caja.</p>
+		<p>La etiqueta <code>span</code> es el último recurso al que debemos acudir cuando ninguna de las otras etiquetas para marcar texto a nivel de línea satisface nuestras necesidades. Además, debemos considerar la posibilidad de añadir significado a esta etiqueta a través de clases e identificadores semánticos, que denoten una función no prevista actualmente en el estándar HTML5.</p>
+		<h3>Datos tabulares</h3>
+		<p>Si hace diez o quince años ya editabas HTML para la web, recordarás que se exhortaba a los editores para que no maquetaran con tablas. En HTML 3.2 se maquetaba el contenido con tablas porque no había otra forma de hacerlo (no existían los divs), pero 
+		<table>
+			<caption>Clase de edición semántica. Notas de los alumnos</caption>
+			<thead>
+				<tr>
+					<th>NOMBRE</th>
+					<th>Actitud</th>
+					<th>Trabajos prácticos</th>
+					<th>Examen</th>
+					<th>MEDIA</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Ana Pérez</th>
+					<td>4</td>
+					<td>3</td>
+					<td>4</td>
+					<td>3,66</td>
+				</tr>
+				<tr>
+					<th>Carlos González</th>
+					<td>5</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3,66</td>
+				</tr>
+				<tr>
+					<th>Patricia Huertas</th>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>4</td>
+				</tr>
+				<tr>
+					<th>Pepe Sánchez</th>
+					<td>2</td>
+					<td>3</td>
+					<td>3</td>
+					<td>2,66</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<th>MEDIA TOTAL</th>
+					<td>3,5</td>
+					<td>3,25</td>
+					<td>3,75</td>
+					<td class="total">3,49</td>
+				</tr>
+			</tfoot>
+		</table>
+		<p>Ejemplo de tabla con el atributo <code>rowspan</code>.</p>
+
+
+				<table>
+			<caption>Clase de edición semántica. Notas de los alumnos</caption>
+			<thead>
+				<tr>
+					<th>NOMBRE</th>
+					<th>Actitud</th>
+					<th>Trabajos prácticos</th>
+					<th>Examen</th>
+					<th>MEDIA</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Ana Pérez</th>
+					<td>4</td>
+					<td rowspan="2">3</td>
+					<td>4</td>
+					<td>3,66</td>
+				</tr>
+				<tr>
+					<th>Carlos González</th>
+					<td>5</td>
+					<td>3</td>
+					<td>3,66</td>
+				</tr>
+				<tr>
+					<th>Patricia Huertas</th>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>4</td>
+				</tr>
+				<tr>
+					<th>Pepe Sánchez</th>
+					<td>2</td>
+					<td>3</td>
+					<td>3</td>
+					<td>2,66</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<th>MEDIA TOTAL</th>
+					<td>3,5</td>
+					<td>3,25</td>
+					<td>3,75</td>
+					<td class="total">3,49</td>
+				</tr>
+			</tfoot>
+		</table>
+		<p>Ejemplo de tabla con el atributo <code>colspan</code>.</p>
+
+
+
+				<table>
+			<caption>Clase de edición semántica. Notas de los alumnos</caption>
+			<thead>
+				<tr>
+					<th>NOMBRE</th>
+					<th>Actitud</th>
+					<th>Trabajos prácticos</th>
+					<th>Examen</th>
+					<th>MEDIA</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Ana Pérez</th>
+					<td>4</td>
+					<td>3</td>
+					<td>4</td>
+					<td>3,66</td>
+				</tr>
+				<tr>
+					<th>Carlos González</th>
+					<td>5</td>
+					<td colspan="2" class="colspan">3</td>
+					<td>3,66</td>
+				</tr>
+				<tr>
+					<th>Patricia Huertas</th>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>4</td>
+				</tr>
+				<tr>
+					<th>Pepe Sánchez</th>
+					<td>2</td>
+					<td>3</td>
+					<td>3</td>
+					<td>2,66</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<th>MEDIA TOTAL</th>
+					<td>3,5</td>
+					<td>3,25</td>
+					<td>3,75</td>
+					<td class="total">3,49</td>
+				</tr>
+			</tfoot>
+		</table>
+
+
+		<h1 class="apendice">Apéndice accesibilidad</h1>
+		<h2>Enfoque tradicional de la accesibilidad</h2>
+		<p>En entornos digitales la accesibilidad ha tenido un enfoque puramente técnico. Según este enfoque, todo libro digital debe ser perceptible, operable, comprensible y robusto.</p>
+		<dl>
+			<dt>Perceptible</dt>
+			<dd>La información y los componentes de la interfaz deben poder ser presentados de forma que el usuario pueda percibirlos. El editor debe tener presentes las diversas discapacidades que pueden tener sus lectores, sobre todo las discapacidades visuales, así como las limitaciones técnicas de los diversos dispositivos de lectura, para ofrecer sus textos a un conjunto de lectores lo más amplio y diverso posible.</dd>
+			<dt>Operable</dt>
+			<dd>El libro debe poder ser no solamente leído, sino también <em>manejado</em> por el usuario. Debe disponer de índices que se puedan consultar y debe tener un marcado semántico que permita una correcta indización del contenido. Su estructura debe facilitar distintos tipos de lectura, tanto la lectura lineal (si el libro está concebido para ella) como la lectura puntual o de consulta. Asimismo, se debe facilitar al usuario que elija las opciones de presentación que más se ajusten a sus gustos y necesidades sin que el libro deje de funcionar o ser operativo por ello: tamaño de letra, interlineado, márgenes, etc.</dd>
+			<dt>Comprensible</dt>
+			<dd>Tanto el contenido como la estructura e interfaz del libro deben poder ser comprendidos por el lector. El editor velará por los aspectos literarios de su trabajo, como ha hecho siempre en papel; igualmente velará por que la maquetación y estructura del libro ayuden y no ofusquen la comprensión del texto. Asimismo, facilitará la integración de su texto con diccionarios creados ad hoc o ya existentes en el dispositivo del usuario. El editor velará por aplicar un marcado semántico y excelente al texto para facilitar su ulterior traducción.</dd>
+			<dt>Robusto</dt>
+			<dd>El libro digital debe ser completamente compatible con los distintos dispositivos de lectura existentes en el mercado, incluyendo los dispositivos antiguos y aquellos que incorporan tecnologías asistivas. El editor debe tener en cuenta las limitaciones técnicas y de otro tipo que a menudo provocan errores, como caracteres corruptos en el texto, libros que no pueden abrirse o elementos del libro que no se muestran o se muestran incorrectamente en determinadas circunstancias.</dd>
+		</dl>
+		<h2>Enfoque socioeconómico de la accesibilidad</h2>
+		<p>El editor no solo debe preocuparse por la accesibilidad desde un punto de vista técnico, sino también socioeconómico. Si bien las nuevas tecnologías permiten la creación de libros digitales que pueden llegar a usuarios con diversas discapacidades, no debemos olvidar que la llamada <a href="https://es.wikipedia.org/wiki/Brecha_digital" title="brecha digital en wikipedia">brecha digital</a> puede dejar sin acceso a la cultura a un sector de la población más pobre o vulnerable socialmente.</p>
+		<p>Hay, no obstante, motivos para la esperanza: la penetración del libro digital entre los ancianos, por ejemplo, es muy alta, a pesar de la brecha digital que tradicionalmente los ha dejado al margen de los avances tecnológicos. La posibilidad de agrandar la letra y el coste de adquisición relativamente bajo de muchos libros digitales de gran consumo ha animado a muchos nietos a regalar y enseñar a usar libros digitales a sus abuelos.</p>
+		<p>La accesibilidad socioeconómica de la cultura ha sido una preocupación tradicional por parte de los poderes públicos, que además de crear editoriales públicas y apoyar el desempeño de las privadas han creado escuelas públicas, universidades, museos, bibliotecas e instituciones científicas. El editor digital es también un actor cultural y debe luchar para garantizar un acceso universal a la cultura, como hacía cuando editaba solamente en papel.</p>
+
+
+
+
+
+
+
+		<!--
+
+		<p>Ejemplo de tabla con el atributo <code>rowspan</code>.</p>
+
+		<table>
+			<thead>
+				<tr>
+					<th>Mes</th>
+					<th>Ahorros</th>
+					<th>Ahorrado para vacaciones</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Enero</td>
+					<td>180</td>
+					<td rowspan="2">50</td>
+				</tr>
+				<tr>
+					<td>Febrero</td>
+					<td>80</td>
+				</tr>
+			</tbody>
+		</table>
+
+
+-->
+
+
+
+
+
+
+
+	</body>
+</html>

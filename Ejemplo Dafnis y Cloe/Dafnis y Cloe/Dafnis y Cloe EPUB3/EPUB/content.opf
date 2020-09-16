@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dcterms="http://purl.org/dc/terms/" version="3.0" xml:lang="en"
+    unique-identifier="bookid">
+    <metadata>
+        <dc:title>Book title</dc:title>
+        <dc:language id="pub-language">en</dc:language>
+        <dc:identifier id="bookid">http://my-URI-stub/</dc:identifier>
+        <meta property="dcterms:modified">2012-02-20T22:17:24Z</meta>
+    </metadata>
+    <manifest>
+        <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+        <item id="htmltoc" properties="nav" media-type="application/xhtml+xml" href="toc.xhtml"/>
+        <item id="front_cover" href="front-cover.xhtml" media-type="application/xhtml+xml"/>
+        <item id="introduccion" href="introduccion.xhtml" media-type="application/xhtml+xml"/>
+        <item id="proemio" href="proemio.xhtml" media-type="application/xhtml+xml"/>
+        <item id="LibroPrimero" href="LibroPrimero.xhtml" media-type="application/xhtml+xml"/>
+        <item id="LibroSegundo" href="LibroSegundo.xhtml" media-type="application/xhtml+xml"/>
+        <item id="LibroTercero" href="LibroTercero.xhtml" media-type="application/xhtml+xml"/>
+        <item id="LibroCuarto" href="LibroCuarto.xhtml" media-type="application/xhtml+xml"/>
+        <item id="style" href="stylesheet.css" media-type="text/css"/>
+    </manifest>
+    <spine toc="ncx">
+        <itemref idref="front_cover"/>
+        <itemref idref="htmltoc"/>
+        <itemref idref="introduccion"/>
+        <itemref idref="proemio"/>
+        <itemref idref="LibroPrimero"/>
+        <itemref idref="LibroSegundo"/>
+        <itemref idref="LibroTercero"/>
+        <itemref idref="LibroCuarto"/>
+    </spine>
+</package>
